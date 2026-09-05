@@ -8,12 +8,14 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
  margin:0;
  background:#080808;
  color:#fff;
  font-family:Arial,Helvetica,sans-serif;
 }
+
 header{
  position:sticky;
  top:0;
@@ -23,23 +25,26 @@ header{
  align-items:center;
  justify-content:space-between;
  padding:0 7%;
- background:rgba(8,8,8,.94);
+ background:rgba(8,8,8,.95);
  border-bottom:1px solid #292929;
  backdrop-filter:blur(10px);
 }
+
 .logo{
  font-size:25px;
  font-weight:900;
  letter-spacing:2px;
- color:#fff;
 }
+
 .logo span{color:#e50914}
+
 nav a{
  color:#aaa;
  text-decoration:none;
  margin-left:25px;
  font-weight:bold;
 }
+
 nav a:hover{color:#e50914}
 
 .hero{
@@ -52,18 +57,22 @@ nav a:hover{color:#e50914}
  background:
  radial-gradient(circle at center,#330000 0,#150000 28%,#080808 65%);
 }
+
 .hero h1{
  font-size:clamp(45px,9vw,90px);
  margin:0;
  font-weight:1000;
  letter-spacing:4px;
 }
+
 .hero h1 span{color:#e50914}
+
 .hero p{
  color:#aaa;
  font-size:18px;
  margin:18px 0 28px;
 }
+
 .hero-btn{
  display:inline-block;
  padding:14px 28px;
@@ -74,6 +83,7 @@ nav a:hover{color:#e50914}
  font-weight:900;
  transition:.2s;
 }
+
 .hero-btn:hover{
  transform:translateY(-2px);
  background:#ff1b26;
@@ -82,14 +92,17 @@ nav a:hover{color:#e50914}
 .section{
  padding:65px 7%;
 }
+
 .section-title{
  text-align:center;
  margin-bottom:35px;
 }
+
 .section-title h2{
  font-size:36px;
  margin:0 0 10px;
 }
+
 .section-title p{
  color:#888;
  margin:0;
@@ -101,6 +114,7 @@ nav a:hover{color:#e50914}
  margin-bottom:30px;
  flex-wrap:wrap;
 }
+
 .controls input,
 .controls select{
  flex:1;
@@ -112,6 +126,7 @@ nav a:hover{color:#e50914}
  color:#fff;
  outline:none;
 }
+
 .controls input:focus,
 .controls select:focus{
  border-color:#e50914;
@@ -130,11 +145,13 @@ nav a:hover{color:#e50914}
  border-radius:14px;
  transition:.25s;
 }
+
 .card:hover{
  transform:translateY(-5px);
  border-color:#e50914;
  box-shadow:0 10px 35px rgba(229,9,20,.12);
 }
+
 .card-img{
  width:100%;
  height:220px;
@@ -142,23 +159,30 @@ nav a:hover{color:#e50914}
  display:block;
  cursor:pointer;
 }
-.card-body{padding:18px}
+
+.card-body{
+ padding:18px;
+}
+
 .card-title{
  font-size:23px;
  font-weight:900;
  margin-bottom:7px;
 }
+
 .card-meta{
  color:#888;
  font-size:14px;
  margin-bottom:16px;
 }
+
 .tags{
  display:flex;
  gap:7px;
  flex-wrap:wrap;
  margin-bottom:16px;
 }
+
 .tag{
  background:#1c1c1c;
  color:#ddd;
@@ -168,15 +192,18 @@ nav a:hover{color:#e50914}
  font-size:12px;
  font-weight:bold;
 }
+
 .price{
  display:flex;
  align-items:center;
  justify-content:space-between;
 }
+
 .price strong{
  color:#e50914;
  font-size:24px;
 }
+
 .details-btn{
  border:0;
  border-radius:7px;
@@ -186,13 +213,17 @@ nav a:hover{color:#e50914}
  font-weight:900;
  cursor:pointer;
 }
-.details-btn:hover{background:#ff1b26}
+
+.details-btn:hover{
+ background:#ff1b26;
+}
 
 .info{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
  gap:18px;
 }
+
 .info-box{
  background:#101010;
  border:1px solid #252525;
@@ -200,11 +231,16 @@ nav a:hover{color:#e50914}
  padding:25px;
  text-align:center;
 }
+
 .info-box .icon{
  font-size:32px;
  margin-bottom:12px;
 }
-.info-box h3{margin:0 0 8px}
+
+.info-box h3{
+ margin:0 0 8px;
+}
+
 .info-box p{
  color:#888;
  line-height:1.5;
@@ -218,6 +254,8 @@ footer{
  color:#666;
 }
 
+/* GALERİ */
+
 .modal{
  position:fixed;
  inset:0;
@@ -228,12 +266,17 @@ footer{
  padding:20px;
  background:rgba(0,0,0,.92);
 }
-.modal.active{display:flex}
+
+.modal.active{
+ display:flex;
+}
+
 .modal-content{
  width:min(1000px,100%);
  max-height:95vh;
  position:relative;
 }
+
 .gallery-main{
  width:100%;
  height:min(65vh,600px);
@@ -241,6 +284,7 @@ footer{
  border-radius:10px;
  background:#050505;
 }
+
 .close{
  position:absolute;
  right:0;
@@ -251,6 +295,7 @@ footer{
  font-size:35px;
  cursor:pointer;
 }
+
 .arrow{
  position:absolute;
  top:50%;
@@ -263,7 +308,9 @@ footer{
  color:#fff;
  font-size:25px;
  cursor:pointer;
+ z-index:5;
 }
+
 .prev{left:15px}
 .next{right:15px}
 
@@ -274,6 +321,7 @@ footer{
  margin-top:12px;
  overflow-x:auto;
 }
+
 .thumbs img{
  width:80px;
  height:55px;
@@ -283,18 +331,38 @@ footer{
  cursor:pointer;
  border:2px solid transparent;
 }
+
 .thumbs img.active{
  opacity:1;
  border-color:#e50914;
 }
 
 @media(max-width:650px){
- header{padding:0 5%}
- nav a{margin-left:12px;font-size:13px}
- .section{padding:50px 5%}
- .hero{min-height:380px}
- .card-img{height:200px}
- .close{top:-40px}
+
+ header{
+  padding:0 5%;
+ }
+
+ nav a{
+  margin-left:12px;
+  font-size:13px;
+ }
+
+ .section{
+  padding:50px 5%;
+ }
+
+ .hero{
+  min-height:380px;
+ }
+
+ .card-img{
+  height:200px;
+ }
+
+ .close{
+  top:-40px;
+ }
 }
 </style>
 </head>
@@ -302,29 +370,55 @@ footer{
 <body>
 
 <header>
- <div class="logo">PRDX<span>STORE</span></div>
+
+ <div class="logo">
+  PRDX<span>STORE</span>
+ </div>
+
  <nav>
   <a href="#store">Mağaza</a>
   <a href="#info">Hakkımızda</a>
  </nav>
+
 </header>
 
+
 <section class="hero">
+
  <div>
-  <h1>PRDX<span>STORE</span></h1>
-  <p>CPM araçlarının yeni adresi.</p>
-  <a class="hero-btn" href="#store">ARAÇLARI KEŞFET</a>
+
+  <h1>
+   PRDX<span>STORE</span>
+  </h1>
+
+  <p>
+   CPM araçlarının yeni adresi.
+  </p>
+
+  <a class="hero-btn" href="#store">
+   ARAÇLARI KEŞFET
+  </a>
+
  </div>
+
 </section>
+
 
 <section class="section" id="store">
 
  <div class="section-title">
+
   <h2>ARAÇ MAĞAZASI</h2>
-  <p>Beğendiğin aracı seç ve detaylarını incele.</p>
+
+  <p>
+   Beğendiğin aracı seç ve detaylarını incele.
+  </p>
+
  </div>
 
+
  <div class="controls">
+
   <input
    type="text"
    id="search"
@@ -332,85 +426,188 @@ footer{
    oninput="renderListings()"
   >
 
-  <select id="category" onchange="renderListings()">
-   <option value="all">Tüm Kategoriler</option>
-   <option value="JDM">JDM</option>
+  <select
+   id="category"
+   onchange="renderListings()"
+  >
+
+   <option value="all">
+    Tüm Kategoriler
+   </option>
+
+   <option value="JDM">
+    JDM
+   </option>
+
   </select>
+
  </div>
 
- <div class="grid" id="listingGrid"></div>
+
+ <div
+  class="grid"
+  id="listingGrid"
+ ></div>
 
 </section>
 
-<section class="section" id="info">
+
+<section
+ class="section"
+ id="info"
+>
 
  <div class="section-title">
+
   <h2>NEDEN PRDX STORE?</h2>
-  <p>CPM araçlarını kolayca keşfet.</p>
+
+  <p>
+   CPM araçlarını kolayca keşfet.
+  </p>
+
  </div>
+
 
  <div class="info">
 
   <div class="info-box">
+
    <div class="icon">🚗</div>
+
    <h3>Özel Araçlar</h3>
-   <p>Birbirinden farklı CPM araçlarını tek yerde bul.</p>
+
+   <p>
+    Birbirinden farklı CPM araçlarını tek yerde bul.
+   </p>
+
   </div>
 
+
   <div class="info-box">
+
    <div class="icon">⚡</div>
+
    <h3>Güçlü Modeller</h3>
-   <p>Performans bilgileri ve araç detaylarını incele.</p>
+
+   <p>
+    Performans bilgileri ve araç detaylarını incele.
+   </p>
+
   </div>
 
+
   <div class="info-box">
+
    <div class="icon">📸</div>
+
    <h3>Detaylı Galeri</h3>
-   <p>Her aracın fotoğraflarını galeri üzerinden görüntüle.</p>
+
+   <p>
+    Her aracın fotoğraflarını galeri üzerinden görüntüle.
+   </p>
+
   </div>
 
+
   <div class="info-box">
+
    <div class="icon">🔥</div>
+
    <h3>PRDX STORE</h3>
-   <p>CPM topluluğu için hazırlanmış özel araç mağazası.</p>
+
+   <p>
+    CPM topluluğu için hazırlanmış özel araç mağazası.
+   </p>
+
   </div>
 
  </div>
 
 </section>
 
+
 <footer>
+
  © 2026 PRDX STORE — Tüm hakları saklıdır.
+
 </footer>
 
-<div class="modal" id="galleryModal" onclick="outsideClose(event)">
+
+<!-- GALERİ MODALI -->
+
+<div
+ class="modal"
+ id="galleryModal"
+ onclick="outsideClose(event)"
+>
+
  <div class="modal-content">
 
-  <button class="close" onclick="closeGallery()">×</button>
+  <button
+   class="close"
+   onclick="closeGallery()"
+  >
+   ×
+  </button>
 
-  <button class="arrow prev" onclick="changePhoto(-1)">‹</button>
 
-  <img id="galleryMain" class="gallery-main" src="" alt="Araç fotoğrafı">
+  <button
+   class="arrow prev"
+   onclick="changePhoto(-1)"
+  >
+   ‹
+  </button>
 
-  <button class="arrow next" onclick="changePhoto(1)">›</button>
 
-  <div class="thumbs" id="thumbs"></div>
+  <img
+   id="galleryMain"
+   class="gallery-main"
+   src=""
+   alt="Araç fotoğrafı"
+  >
+
+
+  <button
+   class="arrow next"
+   onclick="changePhoto(1)"
+  >
+   ›
+  </button>
+
+
+  <div
+   class="thumbs"
+   id="thumbs"
+  ></div>
 
  </div>
+
 </div>
 
+
 <script>
+
+/* =========================
+   ARAÇLAR
+========================= */
 
 const listings = [
 
  {
   id:1,
+
   brand:"Honda",
+
   model:"VTEC2",
+
   year:"2026 Model",
+
   power:"1000+ HP",
+
   category:"JDM",
+
   price:"55 TL",
+
   photos:[
    "https://i.hizliresim.com/rsltqjlh.jpg",
    "https://i.hizliresim.com/lpihth8y.jpg",
@@ -419,79 +616,142 @@ const listings = [
   ]
  },
 
+
  {
   id:2,
+
   brand:"Ford",
+
   model:"Transit",
+
   year:"2026 Model",
+
   power:"250+ HP",
+
   category:"JDM",
+
   price:"45 TL",
+
   photos:[
    "https://i.hizliresim.com/hgzfjvcm.jpg",
    "https://i.hizliresim.com/ilcq4hed.jpg"
+  ]
+ },
+
+
+ {
+  id:3,
+
+  brand:"Volkswagen",
+
+  model:"Passat",
+
+  year:"2025 Model",
+
+  power:"400+ HP",
+
+  category:"JDM",
+
+  price:"45 TL",
+
+  photos:[
+   "https://i.hizliresim.com/ksrokooz.jpg",
+   "https://i.hizliresim.com/yyigtr9b.jpg"
   ]
  }
 
 ];
 
+
 let currentListing = null;
 let currentPhoto = 0;
 
+
+/* =========================
+   İLANLARI GÖSTER
+========================= */
+
 function renderListings(){
 
- const grid = document.getElementById("listingGrid");
+ const grid =
+  document.getElementById("listingGrid");
 
  const search =
-  document.getElementById("search").value
-  .toLowerCase()
-  .trim();
+  document
+   .getElementById("search")
+   .value
+   .toLowerCase()
+   .trim();
 
  const category =
   document.getElementById("category").value;
 
- const filtered = listings.filter(item => {
 
-  const text = (
-   item.brand + " " +
-   item.model + " " +
-   item.year + " " +
-   item.power + " " +
-   item.category
-  ).toLowerCase();
+ const filtered =
+  listings.filter(item => {
 
-  const searchOK = text.includes(search);
+   const text = (
 
-  const categoryOK =
-   category === "all" ||
-   item.category === category;
+    item.brand + " " +
+    item.model + " " +
+    item.year + " " +
+    item.power + " " +
+    item.category
 
-  return searchOK && categoryOK;
- });
+   ).toLowerCase();
+
+
+   const searchOK =
+    text.includes(search);
+
+
+   const categoryOK =
+    category === "all" ||
+    item.category === category;
+
+
+   return searchOK && categoryOK;
+
+  });
+
 
  grid.innerHTML = "";
+
 
  if(filtered.length === 0){
 
   grid.innerHTML = `
+
    <div style="
     grid-column:1/-1;
     text-align:center;
     padding:50px;
     color:#777;
    ">
-    <h3>Araç bulunamadı.</h3>
-    <p>Arama kriterlerini değiştirmeyi dene.</p>
+
+    <h3>
+     Araç bulunamadı.
+    </h3>
+
+    <p>
+     Arama kriterlerini değiştirmeyi dene.
+    </p>
+
    </div>
+
   `;
 
   return;
  }
 
- filtered.forEach((item,index)=>{
 
-  const card = document.createElement("div");
+ filtered.forEach(item => {
+
+  const card =
+   document.createElement("div");
+
   card.className = "card";
+
 
   card.innerHTML = `
 
@@ -502,24 +762,51 @@ function renderListings(){
     onclick="openGallery(${item.id})"
    >
 
+
    <div class="card-body">
 
     <div class="card-title">
-     ${item.brand} ${item.model}
+
+     ${item.brand}
+     ${item.model}
+
     </div>
+
 
     <div class="card-meta">
-     ${item.brand} • ${item.model} • ${item.year}
+
+     ${item.brand}
+     •
+     ${item.model}
+     •
+     ${item.year}
+
     </div>
+
 
     <div class="tags">
-     <span class="tag">${item.power}</span>
-     <span class="tag">${item.category}</span>
-     <span class="tag">${item.year}</span>
+
+     <span class="tag">
+      ${item.power}
+     </span>
+
+     <span class="tag">
+      ${item.category}
+     </span>
+
+     <span class="tag">
+      ${item.year}
+     </span>
+
     </div>
 
+
     <div class="price">
-     <strong>${item.price}</strong>
+
+     <strong>
+      ${item.price}
+     </strong>
+
 
      <button
       class="details-btn"
@@ -527,10 +814,13 @@ function renderListings(){
      >
       FOTOĞRAFLAR
      </button>
+
     </div>
 
    </div>
+
   `;
+
 
   grid.appendChild(card);
 
@@ -538,78 +828,126 @@ function renderListings(){
 
 }
 
+
+/* =========================
+   GALERİYİ AÇ
+========================= */
+
 function openGallery(id){
 
  currentListing =
   listings.find(item => item.id === id);
 
+
  if(!currentListing) return;
+
 
  currentPhoto = 0;
 
  updateGallery();
 
+
  document
   .getElementById("galleryModal")
   .classList.add("active");
 
+
  document.body.style.overflow = "hidden";
 }
+
+
+/* =========================
+   GALERİYİ GÜNCELLE
+========================= */
 
 function updateGallery(){
 
  const main =
   document.getElementById("galleryMain");
 
+
  main.src =
   currentListing.photos[currentPhoto];
+
 
  const thumbs =
   document.getElementById("thumbs");
 
+
  thumbs.innerHTML = "";
 
- currentListing.photos.forEach((photo,index)=>{
 
-  const img =
-   document.createElement("img");
+ currentListing.photos.forEach(
+  (photo,index) => {
 
-  img.src = photo;
+   const img =
+    document.createElement("img");
 
-  if(index === currentPhoto){
-   img.classList.add("active");
+
+   img.src = photo;
+
+
+   if(index === currentPhoto){
+
+    img.classList.add("active");
+
+   }
+
+
+   img.onclick = () => {
+
+    currentPhoto = index;
+
+    updateGallery();
+
+   };
+
+
+   thumbs.appendChild(img);
+
   }
-
-  img.onclick = () => {
-
-   currentPhoto = index;
-   updateGallery();
-
-  };
-
-  thumbs.appendChild(img);
-
- });
+ );
 
 }
+
+
+/* =========================
+   FOTOĞRAF DEĞİŞTİR
+========================= */
 
 function changePhoto(direction){
 
  if(!currentListing) return;
 
+
  currentPhoto += direction;
 
+
  if(currentPhoto < 0){
+
   currentPhoto =
    currentListing.photos.length - 1;
+
  }
 
- if(currentPhoto >= currentListing.photos.length){
+
+ if(
+  currentPhoto >=
+  currentListing.photos.length
+ ){
+
   currentPhoto = 0;
+
  }
+
 
  updateGallery();
 }
+
+
+/* =========================
+   GALERİYİ KAPAT
+========================= */
 
 function closeGallery(){
 
@@ -617,33 +955,66 @@ function closeGallery(){
   .getElementById("galleryModal")
   .classList.remove("active");
 
+
  document.body.style.overflow = "";
+
  currentListing = null;
 }
 
+
+/* =========================
+   DIŞARI TIKLAYINCA KAPAT
+========================= */
+
 function outsideClose(event){
 
- if(event.target.id === "galleryModal"){
+ if(
+  event.target.id ===
+  "galleryModal"
+ ){
+
   closeGallery();
+
  }
 
 }
 
-document.addEventListener("keydown",event=>{
 
- if(event.key === "Escape"){
-  closeGallery();
+/* =========================
+   KLAVYE KONTROLLERİ
+========================= */
+
+document.addEventListener(
+ "keydown",
+ event => {
+
+  if(event.key === "Escape"){
+
+   closeGallery();
+
+  }
+
+
+  if(event.key === "ArrowRight"){
+
+   changePhoto(1);
+
+  }
+
+
+  if(event.key === "ArrowLeft"){
+
+   changePhoto(-1);
+
+  }
+
  }
+);
 
- if(event.key === "ArrowRight"){
-  changePhoto(1);
- }
 
- if(event.key === "ArrowLeft"){
-  changePhoto(-1);
- }
-
-});
+/* =========================
+   BAŞLAT
+========================= */
 
 renderListings();
 
