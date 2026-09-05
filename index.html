@@ -3,1244 +3,649 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
 <title>PRDX STORE</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#070707;
-    color:#fff;
-    min-height:100vh;
+ margin:0;
+ background:#080808;
+ color:#fff;
+ font-family:Arial,Helvetica,sans-serif;
 }
-
-button,input,select{
-    font-family:inherit;
-}
-
-/* HEADER */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(7,7,7,.94);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid #222;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ height:70px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:0 7%;
+ background:rgba(8,8,8,.94);
+ border-bottom:1px solid #292929;
+ backdrop-filter:blur(10px);
 }
-
-.nav{
-    max-width:1250px;
-    height:70px;
-    margin:auto;
-    padding:0 20px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
 .logo{
-    font-size:27px;
-    font-weight:1000;
-    letter-spacing:2px;
+ font-size:25px;
+ font-weight:900;
+ letter-spacing:2px;
+ color:#fff;
 }
-
-.logo span{
-    color:#e50914;
+.logo span{color:#e50914}
+nav a{
+ color:#aaa;
+ text-decoration:none;
+ margin-left:25px;
+ font-weight:bold;
 }
-
-nav{
-    display:flex;
-    gap:6px;
-}
-
-nav button{
-    border:0;
-    background:transparent;
-    color:#888;
-    padding:10px 14px;
-    border-radius:9px;
-    cursor:pointer;
-    font-weight:bold;
-    transition:.2s;
-}
-
-nav button:hover,
-nav button.active{
-    background:#171717;
-    color:#fff;
-}
-
-/* HERO */
+nav a:hover{color:#e50914}
 
 .hero{
-    max-width:1250px;
-    min-height:370px;
-    margin:25px auto;
-    padding:55px 30px;
-
-    border:1px solid #292929;
-    border-radius:24px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
-    position:relative;
-    overflow:hidden;
-
-    background:
-    radial-gradient(
-        circle at 85% 20%,
-        rgba(229,9,20,.25),
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 10% 90%,
-        rgba(255,255,255,.04),
-        transparent 30%
-    ),
-    linear-gradient(
-        135deg,
-        #151515,
-        #080808
-    );
+ min-height:430px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:60px 20px;
+ background:
+ radial-gradient(circle at center,#330000 0,#150000 28%,#080808 65%);
 }
-
-.hero:after{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    right:-100px;
-    bottom:-130px;
-    border:1px solid #e50914;
-    border-radius:50%;
-    opacity:.15;
-}
-
 .hero h1{
-    font-size:56px;
-    font-weight:1000;
-    letter-spacing:-2px;
+ font-size:clamp(45px,9vw,90px);
+ margin:0;
+ font-weight:1000;
+ letter-spacing:4px;
 }
-
-.hero h1 span{
-    color:#e50914;
-}
-
+.hero h1 span{color:#e50914}
 .hero p{
-    max-width:650px;
-    margin-top:16px;
-    color:#8b8b8b;
-    line-height:1.7;
+ color:#aaa;
+ font-size:18px;
+ margin:18px 0 28px;
+}
+.hero-btn{
+ display:inline-block;
+ padding:14px 28px;
+ border-radius:8px;
+ background:#e50914;
+ color:#fff;
+ text-decoration:none;
+ font-weight:900;
+ transition:.2s;
+}
+.hero-btn:hover{
+ transform:translateY(-2px);
+ background:#ff1b26;
 }
 
-.heroButtons{
-    display:flex;
-    gap:10px;
-    margin-top:27px;
-    flex-wrap:wrap;
+.section{
+ padding:65px 7%;
+}
+.section-title{
+ text-align:center;
+ margin-bottom:35px;
+}
+.section-title h2{
+ font-size:36px;
+ margin:0 0 10px;
+}
+.section-title p{
+ color:#888;
+ margin:0;
 }
 
-.heroButton{
-    border:0;
-    padding:14px 20px;
-    border-radius:10px;
-    background:#e50914;
-    color:#fff;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.2s;
+.controls{
+ display:flex;
+ gap:12px;
+ margin-bottom:30px;
+ flex-wrap:wrap;
+}
+.controls input,
+.controls select{
+ flex:1;
+ min-width:200px;
+ padding:14px;
+ border-radius:8px;
+ border:1px solid #292929;
+ background:#111;
+ color:#fff;
+ outline:none;
+}
+.controls input:focus,
+.controls select:focus{
+ border-color:#e50914;
 }
 
-.heroButton:hover{
-    transform:translateY(-2px);
-    background:#ff1722;
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ gap:22px;
 }
 
-.heroButton.dark{
-    background:#181818;
-    border:1px solid #2c2c2c;
+.card{
+ overflow:hidden;
+ background:#111;
+ border:1px solid #242424;
+ border-radius:14px;
+ transition:.25s;
 }
-
-/* CONTAINER */
-
-.container{
-    max-width:1250px;
-    margin:auto;
-    padding:0 20px 60px;
+.card:hover{
+ transform:translateY(-5px);
+ border-color:#e50914;
+ box-shadow:0 10px 35px rgba(229,9,20,.12);
 }
-
-/* STORE HEADER */
-
-.storeHeader{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    margin:35px 0 18px;
+.card-img{
+ width:100%;
+ height:220px;
+ object-fit:cover;
+ display:block;
+ cursor:pointer;
 }
-
-.storeHeader h2{
-    font-size:25px;
+.card-body{padding:18px}
+.card-title{
+ font-size:23px;
+ font-weight:900;
+ margin-bottom:7px;
 }
-
-.status{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    color:#777;
-    font-size:13px;
+.card-meta{
+ color:#888;
+ font-size:14px;
+ margin-bottom:16px;
 }
-
-.statusDot{
-    width:8px;
-    height:8px;
-    background:#20c76a;
-    border-radius:50%;
-    box-shadow:0 0 10px #20c76a;
+.tags{
+ display:flex;
+ gap:7px;
+ flex-wrap:wrap;
+ margin-bottom:16px;
 }
-
-/* SEARCH */
-
-.searchBox{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    padding:15px;
-    border:1px solid #242424;
-    border-radius:14px;
-    background:#0e0e0e;
+.tag{
+ background:#1c1c1c;
+ color:#ddd;
+ border:1px solid #303030;
+ border-radius:6px;
+ padding:6px 9px;
+ font-size:12px;
+ font-weight:bold;
 }
-
-.search{
-    flex:1;
-    min-width:220px;
-    padding:14px 15px;
-    border:1px solid #292929;
-    border-radius:10px;
-    background:#080808;
-    color:#fff;
-    outline:none;
+.price{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
 }
-
-.search::placeholder{
-    color:#555;
+.price strong{
+ color:#e50914;
+ font-size:24px;
 }
-
-.search:focus{
-    border-color:#555;
+.details-btn{
+ border:0;
+ border-radius:7px;
+ padding:10px 15px;
+ background:#e50914;
+ color:#fff;
+ font-weight:900;
+ cursor:pointer;
 }
+.details-btn:hover{background:#ff1b26}
 
-.filter{
-    min-width:170px;
-    padding:14px;
-    border:1px solid #292929;
-    border-radius:10px;
-    background:#080808;
-    color:#fff;
-    outline:none;
+.info{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:18px;
 }
-
-/* İLANLAR */
-
-.listings{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
-    gap:18px;
-    margin-top:22px;
+.info-box{
+ background:#101010;
+ border:1px solid #252525;
+ border-radius:12px;
+ padding:25px;
+ text-align:center;
 }
-
-/* İLAN KARTI */
-
-.carCard{
-    background:#111;
-    border:1px solid #292929;
-    border-radius:17px;
-    overflow:hidden;
-    cursor:pointer;
-    transition:.25s;
+.info-box .icon{
+ font-size:32px;
+ margin-bottom:12px;
 }
-
-.carCard:hover{
-    transform:translateY(-5px);
-    border-color:#555;
-    box-shadow:0 15px 40px #000;
+.info-box h3{margin:0 0 8px}
+.info-box p{
+ color:#888;
+ line-height:1.5;
+ margin:0;
 }
-
-.carImage{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
-}
-
-.carInfo{
-    padding:17px;
-}
-
-.carName{
-    font-size:21px;
-    font-weight:900;
-}
-
-.carMeta{
-    margin-top:7px;
-    color:#777;
-    font-size:13px;
-}
-
-.carPrice{
-    margin-top:14px;
-    color:#e50914;
-    font-size:25px;
-    font-weight:900;
-}
-
-.carDetails{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-    margin-top:14px;
-}
-
-.carDetail{
-    padding:10px;
-    border-radius:9px;
-    background:#181818;
-    color:#888;
-    font-size:12px;
-}
-
-.carDetail b{
-    display:block;
-    margin-top:4px;
-    color:#fff;
-    font-size:14px;
-}
-
-.photoHint{
-    margin-top:13px;
-    color:#666;
-    font-size:12px;
-}
-
-/* GALERİ */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:2000;
-    background:rgba(0,0,0,.9);
-    backdrop-filter:blur(12px);
-    align-items:center;
-    justify-content:center;
-    padding:15px;
-}
-
-.modal.show{
-    display:flex;
-}
-
-.galleryBox{
-    width:100%;
-    max-width:950px;
-    max-height:94vh;
-    overflow:auto;
-    background:#111;
-    border:1px solid #333;
-    border-radius:18px;
-    padding:15px;
-}
-
-.galleryTop{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:13px;
-}
-
-.galleryTop strong{
-    font-size:18px;
-}
-
-.close{
-    width:40px;
-    height:40px;
-    border:0;
-    border-radius:9px;
-    background:#222;
-    color:#fff;
-    font-size:24px;
-    cursor:pointer;
-}
-
-/* ANA FOTO */
-
-.mainPhotoArea{
-    position:relative;
-    width:100%;
-    background:#050505;
-    border-radius:13px;
-    overflow:hidden;
-}
-
-.mainPhoto{
-    display:block;
-    width:100%;
-    max-height:65vh;
-    object-fit:contain;
-}
-
-/* OKLAR */
-
-.arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:46px;
-    height:46px;
-    border:1px solid #444;
-    border-radius:50%;
-    background:rgba(0,0,0,.7);
-    color:#fff;
-    font-size:27px;
-    cursor:pointer;
-}
-
-.arrow:hover{
-    background:#e50914;
-}
-
-.arrow.left{
-    left:12px;
-}
-
-.arrow.right{
-    right:12px;
-}
-
-/* KÜÇÜK FOTOĞRAFLAR */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:9px;
-    margin-top:10px;
-}
-
-.thumb{
-    width:100%;
-    height:95px;
-    object-fit:cover;
-    border-radius:9px;
-    border:2px solid transparent;
-    cursor:pointer;
-    opacity:.6;
-    transition:.2s;
-}
-
-.thumb:hover{
-    opacity:1;
-}
-
-.thumb.active{
-    border-color:#e50914;
-    opacity:1;
-}
-
-/* GALERİ BİLGİ */
-
-.galleryInfo{
-    padding:17px 3px 5px;
-}
-
-.galleryInfo h2{
-    font-size:25px;
-}
-
-.galleryInfo p{
-    margin-top:7px;
-    color:#888;
-}
-
-/* INFO */
-
-.infoGrid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:18px;
-}
-
-.infoCard{
-    padding:20px;
-    background:#0d0d0d;
-    border:1px solid #242424;
-    border-radius:15px;
-}
-
-.infoCardIcon{
-    font-size:25px;
-    margin-bottom:13px;
-}
-
-.infoCard h3{
-    font-size:16px;
-}
-
-.infoCard p{
-    margin-top:7px;
-    color:#666;
-    font-size:13px;
-    line-height:1.5;
-}
-
-/* FOOTER */
 
 footer{
-    border-top:1px solid #222;
-    padding:35px 20px;
-    text-align:center;
-    color:#555;
+ border-top:1px solid #242424;
+ padding:30px 7%;
+ text-align:center;
+ color:#666;
 }
 
-.footerLogo{
-    color:#fff;
-    font-size:21px;
-    font-weight:900;
+.modal{
+ position:fixed;
+ inset:0;
+ z-index:2000;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ padding:20px;
+ background:rgba(0,0,0,.92);
+}
+.modal.active{display:flex}
+.modal-content{
+ width:min(1000px,100%);
+ max-height:95vh;
+ position:relative;
+}
+.gallery-main{
+ width:100%;
+ height:min(65vh,600px);
+ object-fit:contain;
+ border-radius:10px;
+ background:#050505;
+}
+.close{
+ position:absolute;
+ right:0;
+ top:-45px;
+ border:0;
+ background:none;
+ color:#fff;
+ font-size:35px;
+ cursor:pointer;
+}
+.arrow{
+ position:absolute;
+ top:50%;
+ transform:translateY(-50%);
+ width:45px;
+ height:45px;
+ border:0;
+ border-radius:50%;
+ background:rgba(229,9,20,.9);
+ color:#fff;
+ font-size:25px;
+ cursor:pointer;
+}
+.prev{left:15px}
+.next{right:15px}
+
+.thumbs{
+ display:flex;
+ justify-content:center;
+ gap:10px;
+ margin-top:12px;
+ overflow-x:auto;
+}
+.thumbs img{
+ width:80px;
+ height:55px;
+ object-fit:cover;
+ border-radius:6px;
+ opacity:.55;
+ cursor:pointer;
+ border:2px solid transparent;
+}
+.thumbs img.active{
+ opacity:1;
+ border-color:#e50914;
 }
 
-.footerLogo span{
-    color:#e50914;
-}
-
-.footerText{
-    margin-top:10px;
-    font-size:13px;
-}
-
-/* MOBİL */
-
-@media(max-width:700px){
-
-    .nav{
-        height:64px;
-        padding:0 12px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-    nav{
-        gap:2px;
-    }
-
-    nav button{
-        padding:8px 7px;
-        font-size:11px;
-    }
-
-    .hero{
-        margin:14px 12px;
-        min-height:310px;
-        padding:35px 20px;
-        border-radius:19px;
-    }
-
-    .hero h1{
-        font-size:39px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .container{
-        padding:0 12px 45px;
-    }
-
-    .storeHeader{
-        align-items:flex-start;
-        flex-direction:column;
-    }
-
-    .searchBox{
-        padding:10px;
-    }
-
-    .search,
-    .filter{
-        width:100%;
-    }
-
-    .listings{
-        grid-template-columns:1fr;
-    }
-
-    .carImage{
-        height:230px;
-    }
-
-    .infoGrid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .thumb{
-        height:100px;
-    }
-
-    .mainPhoto{
-        max-height:55vh;
-    }
+@media(max-width:650px){
+ header{padding:0 5%}
+ nav a{margin-left:12px;font-size:13px}
+ .section{padding:50px 5%}
+ .hero{min-height:380px}
+ .card-img{height:200px}
+ .close{top:-40px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
-<div class="nav">
-
-<div class="logo">
-PRDX<span>STORE</span>
-</div>
-
-<nav>
-
-<button class="active" onclick="goHome()">
-Ana Sayfa
-</button>
-
-<button onclick="scrollToStore()">
-Mağaza
-</button>
-
-<button onclick="scrollToInfo()">
-Hakkında
-</button>
-
-</nav>
-
-</div>
-
+ <div class="logo">PRDX<span>STORE</span></div>
+ <nav>
+  <a href="#store">Mağaza</a>
+  <a href="#info">Hakkımızda</a>
+ </nav>
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
+ <div>
+  <h1>PRDX<span>STORE</span></h1>
+  <p>CPM araçlarının yeni adresi.</p>
+  <a class="hero-btn" href="#store">ARAÇLARI KEŞFET</a>
+ </div>
+</section>
 
-<h1>
-PRDX <span>STORE</span>
-</h1>
+<section class="section" id="store">
 
-<p>
-PRDX STORE'a hoş geldin. Modern, hızlı ve
-kullanımı kolay CPM mağazası.
-</p>
+ <div class="section-title">
+  <h2>ARAÇ MAĞAZASI</h2>
+  <p>Beğendiğin aracı seç ve detaylarını incele.</p>
+ </div>
 
-<div class="heroButtons">
+ <div class="controls">
+  <input
+   type="text"
+   id="search"
+   placeholder="Araç, marka veya model ara..."
+   oninput="renderListings()"
+  >
 
-<button class="heroButton" onclick="scrollToStore()">
-Mağazaya Git
-</button>
+  <select id="category" onchange="renderListings()">
+   <option value="all">Tüm Kategoriler</option>
+   <option value="JDM">JDM</option>
+  </select>
+ </div>
 
-<button class="heroButton dark" onclick="scrollToInfo()">
-PRDX STORE
-</button>
-
-</div>
+ <div class="grid" id="listingGrid"></div>
 
 </section>
 
-<!-- STORE -->
-
-<div class="container" id="store">
-
-<div class="storeHeader">
-
-<h2>
-Mağaza
-</h2>
-
-<div class="status">
-
-<div class="statusDot"></div>
-
-Sistem aktif
-
-</div>
-
-</div>
-
-<!-- ARAMA -->
-
-<div class="searchBox">
-
-<input
-id="search"
-class="search"
-type="text"
-placeholder="🔎 İlan ara..."
-oninput="filterListings()"
->
-
-<select
-id="category"
-class="filter"
-onchange="filterListings()">
-
-<option value="all">
-Tüm Kategoriler
-</option>
-
-<option value="JDM">
-JDM
-</option>
-
-</select>
-
-</div>
-
-<!-- İLANLAR -->
-
-<div class="listings" id="listings">
-
-<!-- HONDA VTEC2 -->
-
-<div
-class="carCard"
-data-name="Honda VTEC2"
-data-category="JDM"
-onclick="openGallery()"
->
-
-<img
-class="carImage"
-src="https://i.hizliresim.com/rsltqjlh.jpg"
-alt="Honda VTEC2"
->
-
-<div class="carInfo">
-
-<div class="carName">
-Honda VTEC2
-</div>
-
-<div class="carMeta">
-Honda • 2026 Model
-</div>
-
-<div class="carPrice">
-55 TL
-</div>
-
-<div class="carDetails">
-
-<div class="carDetail">
-⚡ Güç
-<b>1000+ HP</b>
-</div>
-
-<div class="carDetail">
-🏁 Kategori
-<b>JDM</b>
-</div>
-
-</div>
-
-<div class="photoHint">
-📷 4 fotoğraf • Görmek için ilana dokun
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- İLAN YOK -->
-
-<div
-id="noResults"
-style="
-display:none;
-margin-top:18px;
-padding:50px 20px;
-text-align:center;
-border:1px dashed #333;
-border-radius:18px;
-background:#0c0c0c;
-color:#666;
-">
-
-<h3 style="color:#fff;margin-bottom:8px">
-İlan bulunamadı
-</h3>
-
-Arama kriterlerine uygun ilan yok.
-
-</div>
-
-<!-- INFO -->
-
-<div id="info">
-
-<div class="storeHeader">
-
-<h2>
-PRDX STORE
-</h2>
-
-</div>
-
-<div class="infoGrid">
-
-<div class="infoCard">
-
-<div class="infoCardIcon">
-⚡
-</div>
-
-<h3>
-Hızlı
-</h3>
-
-<p>
-Hızlı ve kolay mağaza deneyimi.
-</p>
-
-</div>
-
-<div class="infoCard">
-
-<div class="infoCardIcon">
-🛒
-</div>
-
-<h3>
-Mağaza
-</h3>
-
-<p>
-CPM ilanları burada düzenli şekilde
-yayınlanacak.
-</p>
-
-</div>
-
-<div class="infoCard">
-
-<div class="infoCardIcon">
-📱
-</div>
-
-<h3>
-Mobil Uyumlu
-</h3>
-
-<p>
-Telefon, tablet ve bilgisayarlarda
-uyumlu çalışır.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- GALERİ -->
-
-<div class="modal" id="modal">
-
-<div class="galleryBox">
-
-<div class="galleryTop">
-
-<strong>
-Honda VTEC2
-</strong>
-
-<button class="close" onclick="closeGallery()">
-×
-</button>
-
-</div>
-
-<div class="mainPhotoArea">
-
-<img
-id="mainPhoto"
-class="mainPhoto"
-src="https://i.hizliresim.com/rsltqjlh.jpg"
-alt="Honda VTEC2"
->
-
-<button
-class="arrow left"
-onclick="previousPhoto(event)"
->
-‹
-</button>
-
-<button
-class="arrow right"
-onclick="nextPhoto(event)"
->
-›
-</button>
-
-</div>
-
-<!-- 4 FOTOĞRAF -->
-
-<div class="gallery">
-
-<img
-class="thumb active"
-src="https://i.hizliresim.com/rsltqjlh.jpg"
-onclick="changePhoto(0,event)"
->
-
-<img
-class="thumb"
-src="https://i.hizliresim.com/lpihth8y.jpg"
-onclick="changePhoto(1,event)"
->
-
-<img
-class="thumb"
-src="https://i.hizliresim.com/drosofcc.jpg"
-onclick="changePhoto(2,event)"
->
-
-<img
-class="thumb"
-src="https://i.hizliresim.com/ersfg7ij.jpg"
-onclick="changePhoto(3,event)"
->
-
-</div>
-
-<div class="galleryInfo">
-
-<h2>
-Honda VTEC2
-</h2>
-
-<p>
-Honda • 2026 Model • 1000+ HP • JDM • 55 TL
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
+<section class="section" id="info">
+
+ <div class="section-title">
+  <h2>NEDEN PRDX STORE?</h2>
+  <p>CPM araçlarını kolayca keşfet.</p>
+ </div>
+
+ <div class="info">
+
+  <div class="info-box">
+   <div class="icon">🚗</div>
+   <h3>Özel Araçlar</h3>
+   <p>Birbirinden farklı CPM araçlarını tek yerde bul.</p>
+  </div>
+
+  <div class="info-box">
+   <div class="icon">⚡</div>
+   <h3>Güçlü Modeller</h3>
+   <p>Performans bilgileri ve araç detaylarını incele.</p>
+  </div>
+
+  <div class="info-box">
+   <div class="icon">📸</div>
+   <h3>Detaylı Galeri</h3>
+   <p>Her aracın fotoğraflarını galeri üzerinden görüntüle.</p>
+  </div>
+
+  <div class="info-box">
+   <div class="icon">🔥</div>
+   <h3>PRDX STORE</h3>
+   <p>CPM topluluğu için hazırlanmış özel araç mağazası.</p>
+  </div>
+
+ </div>
+
+</section>
 
 <footer>
-
-<div class="footerLogo">
-PRDX<span>STORE</span>
-</div>
-
-<div class="footerText">
-CPM mağaza platformu
-</div>
-
-<br>
-
-© 2026 PRDX STORE
-
+ © 2026 PRDX STORE — Tüm hakları saklıdır.
 </footer>
+
+<div class="modal" id="galleryModal" onclick="outsideClose(event)">
+ <div class="modal-content">
+
+  <button class="close" onclick="closeGallery()">×</button>
+
+  <button class="arrow prev" onclick="changePhoto(-1)">‹</button>
+
+  <img id="galleryMain" class="gallery-main" src="" alt="Araç fotoğrafı">
+
+  <button class="arrow next" onclick="changePhoto(1)">›</button>
+
+  <div class="thumbs" id="thumbs"></div>
+
+ </div>
+</div>
 
 <script>
 
-/* SAYFA GEÇİŞLERİ */
+const listings = [
 
-function scrollToStore(){
+ {
+  id:1,
+  brand:"Honda",
+  model:"VTEC2",
+  year:"2026 Model",
+  power:"1000+ HP",
+  category:"JDM",
+  price:"55 TL",
+  photos:[
+   "https://i.hizliresim.com/rsltqjlh.jpg",
+   "https://i.hizliresim.com/lpihth8y.jpg",
+   "https://i.hizliresim.com/drosofcc.jpg",
+   "https://i.hizliresim.com/ersfg7ij.jpg"
+  ]
+ },
 
-    document
-    .getElementById("store")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-function scrollToInfo(){
-
-    document
-    .getElementById("info")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-function goHome(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-/* FOTOĞRAF GALERİSİ */
-
-const photos = [
-
-    "https://i.hizliresim.com/rsltqjlh.jpg",
-
-    "https://i.hizliresim.com/lpihth8y.jpg",
-
-    "https://i.hizliresim.com/drosofcc.jpg",
-
-    "https://i.hizliresim.com/ersfg7ij.jpg"
+ {
+  id:2,
+  brand:"Ford",
+  model:"Transit",
+  year:"2026 Model",
+  power:"250+ HP",
+  category:"JDM",
+  price:"45 TL",
+  photos:[
+   "https://i.hizliresim.com/hgzfjvcm.jpg",
+   "https://i.hizliresim.com/ilcq4hed.jpg"
+  ]
+ }
 
 ];
 
+let currentListing = null;
 let currentPhoto = 0;
 
-const modal =
-document.getElementById("modal");
+function renderListings(){
 
-const mainPhoto =
-document.getElementById("mainPhoto");
+ const grid = document.getElementById("listingGrid");
 
-const thumbnails =
-document.querySelectorAll(".thumb");
+ const search =
+  document.getElementById("search").value
+  .toLowerCase()
+  .trim();
 
-function openGallery(){
+ const category =
+  document.getElementById("category").value;
 
-    currentPhoto = 0;
+ const filtered = listings.filter(item => {
 
-    mainPhoto.src = photos[0];
+  const text = (
+   item.brand + " " +
+   item.model + " " +
+   item.year + " " +
+   item.power + " " +
+   item.category
+  ).toLowerCase();
 
-    thumbnails.forEach((thumb,i)=>{
+  const searchOK = text.includes(search);
 
-        thumb.classList.toggle(
-            "active",
-            i === 0
-        );
+  const categoryOK =
+   category === "all" ||
+   item.category === category;
 
-    });
+  return searchOK && categoryOK;
+ });
 
-    modal.classList.add("show");
+ grid.innerHTML = "";
 
+ if(filtered.length === 0){
+
+  grid.innerHTML = `
+   <div style="
+    grid-column:1/-1;
+    text-align:center;
+    padding:50px;
+    color:#777;
+   ">
+    <h3>Araç bulunamadı.</h3>
+    <p>Arama kriterlerini değiştirmeyi dene.</p>
+   </div>
+  `;
+
+  return;
+ }
+
+ filtered.forEach((item,index)=>{
+
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+
+   <img
+    class="card-img"
+    src="${item.photos[0]}"
+    alt="${item.brand} ${item.model}"
+    onclick="openGallery(${item.id})"
+   >
+
+   <div class="card-body">
+
+    <div class="card-title">
+     ${item.brand} ${item.model}
+    </div>
+
+    <div class="card-meta">
+     ${item.brand} • ${item.model} • ${item.year}
+    </div>
+
+    <div class="tags">
+     <span class="tag">${item.power}</span>
+     <span class="tag">${item.category}</span>
+     <span class="tag">${item.year}</span>
+    </div>
+
+    <div class="price">
+     <strong>${item.price}</strong>
+
+     <button
+      class="details-btn"
+      onclick="openGallery(${item.id})"
+     >
+      FOTOĞRAFLAR
+     </button>
+    </div>
+
+   </div>
+  `;
+
+  grid.appendChild(card);
+
+ });
+
+}
+
+function openGallery(id){
+
+ currentListing =
+  listings.find(item => item.id === id);
+
+ if(!currentListing) return;
+
+ currentPhoto = 0;
+
+ updateGallery();
+
+ document
+  .getElementById("galleryModal")
+  .classList.add("active");
+
+ document.body.style.overflow = "hidden";
+}
+
+function updateGallery(){
+
+ const main =
+  document.getElementById("galleryMain");
+
+ main.src =
+  currentListing.photos[currentPhoto];
+
+ const thumbs =
+  document.getElementById("thumbs");
+
+ thumbs.innerHTML = "";
+
+ currentListing.photos.forEach((photo,index)=>{
+
+  const img =
+   document.createElement("img");
+
+  img.src = photo;
+
+  if(index === currentPhoto){
+   img.classList.add("active");
+  }
+
+  img.onclick = () => {
+
+   currentPhoto = index;
+   updateGallery();
+
+  };
+
+  thumbs.appendChild(img);
+
+ });
+
+}
+
+function changePhoto(direction){
+
+ if(!currentListing) return;
+
+ currentPhoto += direction;
+
+ if(currentPhoto < 0){
+  currentPhoto =
+   currentListing.photos.length - 1;
+ }
+
+ if(currentPhoto >= currentListing.photos.length){
+  currentPhoto = 0;
+ }
+
+ updateGallery();
 }
 
 function closeGallery(){
 
-    modal.classList.remove("show");
+ document
+  .getElementById("galleryModal")
+  .classList.remove("active");
+
+ document.body.style.overflow = "";
+ currentListing = null;
+}
+
+function outsideClose(event){
+
+ if(event.target.id === "galleryModal"){
+  closeGallery();
+ }
 
 }
 
-function changePhoto(index,event){
+document.addEventListener("keydown",event=>{
 
-    if(event){
-        event.stopPropagation();
-    }
+ if(event.key === "Escape"){
+  closeGallery();
+ }
 
-    currentPhoto = index;
+ if(event.key === "ArrowRight"){
+  changePhoto(1);
+ }
 
-    mainPhoto.src =
-    photos[currentPhoto];
+ if(event.key === "ArrowLeft"){
+  changePhoto(-1);
+ }
 
-    thumbnails.forEach(
-        (thumb,i)=>{
+});
 
-            thumb.classList.toggle(
-                "active",
-                i === currentPhoto
-            );
-
-        }
-    );
-
-}
-
-function nextPhoto(event){
-
-    if(event){
-        event.stopPropagation();
-    }
-
-    currentPhoto++;
-
-    if(
-        currentPhoto >= photos.length
-    ){
-
-        currentPhoto = 0;
-
-    }
-
-    changePhoto(currentPhoto);
-
-}
-
-function previousPhoto(event){
-
-    if(event){
-        event.stopPropagation();
-    }
-
-    currentPhoto--;
-
-    if(currentPhoto < 0){
-
-        currentPhoto =
-        photos.length - 1;
-
-    }
-
-    changePhoto(currentPhoto);
-
-}
-
-/* MODAL DIŞINA TIKLAMA */
-
-modal.addEventListener(
-    "click",
-    function(e){
-
-        if(e.target === modal){
-
-            closeGallery();
-
-        }
-
-    }
-);
-
-/* KLAVYE */
-
-document.addEventListener(
-    "keydown",
-    function(e){
-
-        if(e.key === "Escape"){
-
-            closeGallery();
-
-        }
-
-        if(
-            modal.classList.contains("show")
-        ){
-
-            if(e.key === "ArrowRight"){
-
-                nextPhoto();
-
-            }
-
-            if(e.key === "ArrowLeft"){
-
-                previousPhoto();
-
-            }
-
-        }
-
-    }
-);
-
-/* ARAMA / KATEGORİ */
-
-function filterListings(){
-
-    const search =
-    document
-    .getElementById("search")
-    .value
-    .toLowerCase();
-
-    const category =
-    document
-    .getElementById("category")
-    .value;
-
-    const cards =
-    document.querySelectorAll(".carCard");
-
-    let visible = 0;
-
-    cards.forEach(card=>{
-
-        const name =
-        card
-        .dataset
-        .name
-        .toLowerCase();
-
-        const cardCategory =
-        card
-        .dataset
-        .category;
-
-        const searchOK =
-        name.includes(search);
-
-        const categoryOK =
-        category === "all" ||
-        cardCategory === category;
-
-        if(
-            searchOK &&
-            categoryOK
-        ){
-
-            card.style.display =
-            "block";
-
-            visible++;
-
-        }else{
-
-            card.style.display =
-            "none";
-
-        }
-
-    });
-
-    document
-    .getElementById("noResults")
-    .style.display =
-    visible === 0
-    ? "block"
-    : "none";
-
-}
+renderListings();
 
 </script>
 
