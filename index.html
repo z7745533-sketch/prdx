@@ -2,11 +2,15 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>PRDX STORE</title>
 
 <style>
+
+/* =========================
+   TEMEL
+========================= */
 
 *{
     margin:0;
@@ -14,28 +18,45 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#070707;
     color:#fff;
+    min-height:100vh;
 }
 
-/* HEADER */
+button,
+input,
+select{
+    font-family:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
-    z-index:100;
-    background:rgba(7,7,7,.95);
-    backdrop-filter:blur(15px);
+    z-index:1000;
+
+    background:rgba(7,7,7,.94);
+    backdrop-filter:blur(18px);
+
     border-bottom:1px solid #222;
 }
 
 .nav{
-    max-width:1200px;
+    max-width:1250px;
     height:70px;
     margin:auto;
-    padding:0 18px;
+
+    padding:0 20px;
 
     display:flex;
     align-items:center;
@@ -43,8 +64,8 @@ header{
 }
 
 .logo{
-    font-size:26px;
-    font-weight:900;
+    font-size:27px;
+    font-weight:1000;
     letter-spacing:2px;
 }
 
@@ -54,60 +75,92 @@ header{
 
 nav{
     display:flex;
-    gap:8px;
+    gap:6px;
 }
 
 nav button{
-    background:none;
     border:0;
-    color:#999;
+    background:transparent;
+
+    color:#888;
 
     padding:10px 14px;
-    border-radius:8px;
+    border-radius:9px;
 
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
+
+    transition:.2s;
 }
 
 nav button:hover,
 nav button.active{
+    background:#171717;
     color:#fff;
-    background:#181818;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    max-width:1200px;
+    max-width:1250px;
+    min-height:370px;
+
     margin:25px auto;
 
-    min-height:320px;
+    padding:55px 30px;
 
-    padding:50px 25px;
-
-    border:1px solid #272727;
-    border-radius:22px;
+    border:1px solid #292929;
+    border-radius:24px;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
 
+    position:relative;
+    overflow:hidden;
+
     background:
     radial-gradient(
         circle at 85% 20%,
-        #430606,
-        transparent 32%
+        rgba(229,9,20,.25),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 10% 90%,
+        rgba(255,255,255,.04),
+        transparent 30%
     ),
     linear-gradient(
         135deg,
-        #141414,
+        #151515,
         #080808
     );
 }
 
+.hero:after{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    right:-100px;
+    bottom:-130px;
+
+    border:1px solid #e50914;
+    border-radius:50%;
+
+    opacity:.15;
+}
+
 .hero h1{
-    font-size:52px;
-    font-weight:900;
+    font-size:56px;
+    font-weight:1000;
+    letter-spacing:-2px;
 }
 
 .hero h1 span{
@@ -115,144 +168,231 @@ nav button.active{
 }
 
 .hero p{
-    max-width:620px;
+    max-width:650px;
 
-    margin-top:15px;
+    margin-top:16px;
 
-    color:#888;
+    color:#8b8b8b;
 
-    line-height:1.6;
+    line-height:1.7;
 }
 
-.heroButton{
-    width:max-content;
-
-    margin-top:25px;
-
-    padding:14px 21px;
-
-    border:0;
-    border-radius:10px;
-
-    background:#e50914;
-    color:white;
-
-    font-weight:bold;
-
-    cursor:pointer;
-}
-
-.heroButton:hover{
-    background:#ff1823;
-}
-
-/* CONTENT */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-
-    padding:0 18px 50px;
-}
-
-/* SEARCH */
-
-.searchArea{
+.heroButtons{
     display:flex;
     gap:10px;
 
-    margin:25px 0;
+    margin-top:27px;
 
     flex-wrap:wrap;
 }
 
-.search{
-    flex:1;
-    min-width:220px;
+.heroButton{
+    border:0;
 
-    padding:14px;
+    padding:14px 20px;
 
     border-radius:10px;
+
+    background:#e50914;
+    color:#fff;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.heroButton:hover{
+    transform:translateY(-2px);
+    background:#ff1722;
+}
+
+.heroButton.dark{
+    background:#181818;
+    border:1px solid #2c2c2c;
+}
+
+
+/* =========================
+   ANA CONTAINER
+========================= */
+
+.container{
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:0 20px 60px;
+}
+
+
+/* =========================
+   ÜST BİLGİ
+========================= */
+
+.storeHeader{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin:35px 0 18px;
+}
+
+.storeHeader h2{
+    font-size:25px;
+}
+
+.status{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+.statusDot{
+    width:8px;
+    height:8px;
+
+    background:#20c76a;
+
+    border-radius:50%;
+
+    box-shadow:0 0 10px #20c76a;
+}
+
+
+/* =========================
+   ARAMA ALANI
+========================= */
+
+.searchBox{
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    padding:15px;
+
+    border:1px solid #242424;
+
+    border-radius:14px;
+
+    background:#0e0e0e;
+}
+
+.search{
+    flex:1;
+
+    min-width:220px;
+
+    padding:14px 15px;
+
     border:1px solid #292929;
 
-    background:#111;
+    border-radius:10px;
+
+    background:#080808;
+
     color:#fff;
 
     outline:none;
+}
+
+.search::placeholder{
+    color:#555;
 }
 
 .search:focus{
     border-color:#555;
 }
 
-select{
+.filter{
+    min-width:170px;
+
     padding:14px;
 
-    border-radius:10px;
     border:1px solid #292929;
 
-    background:#111;
+    border-radius:10px;
+
+    background:#080808;
+
     color:#fff;
 
     outline:none;
 }
 
-/* TITLE */
 
-.sectionTitle{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    margin:30px 0 15px;
-}
-
-.sectionTitle h2{
-    font-size:23px;
-}
-
-.sectionTitle span{
-    color:#666;
-    font-size:14px;
-}
-
-/* EMPTY STORE */
+/* =========================
+   BOŞ MAĞAZA
+========================= */
 
 .emptyStore{
-    min-height:300px;
+    min-height:350px;
+
+    margin-top:18px;
+
+    border:1px dashed #333;
+
+    border-radius:18px;
+
+    background:#0c0c0c;
 
     display:flex;
     flex-direction:column;
+
     align-items:center;
     justify-content:center;
 
     text-align:center;
 
-    border:1px dashed #333;
-    border-radius:18px;
-
-    background:#0d0d0d;
+    padding:30px;
 }
 
 .emptyIcon{
-    font-size:55px;
-    margin-bottom:15px;
+    width:75px;
+    height:75px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:#151515;
+
+    font-size:34px;
+
+    margin-bottom:18px;
 }
 
 .emptyStore h3{
     font-size:22px;
-    margin-bottom:8px;
 }
 
 .emptyStore p{
+    max-width:520px;
+
     color:#666;
-    max-width:450px;
-    line-height:1.5;
+
+    line-height:1.6;
+
+    margin-top:10px;
 }
 
-/* FUTURE CAR GRID */
 
-.carGrid{
+/* =========================
+   SONRADAN İLANLAR
+========================= */
+
+.listings{
     display:grid;
 
     grid-template-columns:
@@ -262,147 +402,163 @@ select{
     );
 
     gap:16px;
+
+    margin-top:18px;
 }
 
-/* CARD ALTYAPISI */
 
-.carCard{
-    background:#111;
+/*
+    İLANLAR SONRADAN BURAYA GELECEK.
 
-    border:1px solid #252525;
-    border-radius:16px;
+    Şimdilik boş.
+*/
 
-    overflow:hidden;
 
-    transition:.2s;
+/* =========================
+   ALT BİLGİ KARTLARI
+========================= */
+
+.infoGrid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:18px;
 }
 
-.carCard:hover{
-    transform:translateY(-4px);
-    border-color:#444;
+.infoCard{
+    padding:20px;
+
+    background:#0d0d0d;
+
+    border:1px solid #242424;
+
+    border-radius:15px;
 }
 
-.carImage{
-    width:100%;
-    height:175px;
+.infoCardIcon{
+    font-size:25px;
 
-    object-fit:cover;
-
-    background:#191919;
+    margin-bottom:13px;
 }
 
-.carInfo{
-    padding:15px;
+.infoCard h3{
+    font-size:16px;
 }
 
-.carName{
-    font-size:18px;
-    font-weight:bold;
+.infoCard p{
+    margin-top:7px;
+
+    color:#666;
+
+    font-size:13px;
+
+    line-height:1.5;
 }
 
-.carPrice{
-    margin-top:12px;
 
-    font-size:21px;
-    font-weight:900;
-
-    color:#e50914;
-}
-
-.carButton{
-    width:100%;
-
-    margin-top:14px;
-
-    padding:12px;
-
-    border:0;
-    border-radius:9px;
-
-    background:#1c1c1c;
-    color:#fff;
-
-    font-weight:bold;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     border-top:1px solid #222;
 
-    padding:30px 18px;
+    padding:35px 20px;
 
     text-align:center;
 
-    color:#666;
+    color:#555;
 }
 
 .footerLogo{
     color:#fff;
+
+    font-size:21px;
+
     font-weight:900;
-    font-size:20px;
 }
 
 .footerLogo span{
     color:#e50914;
 }
 
-/* MOBILE */
+.footerText{
+    margin-top:10px;
 
-@media(max-width:650px){
+    font-size:13px;
+}
+
+
+/* =========================
+   MOBİL
+========================= */
+
+@media(max-width:700px){
 
     .nav{
         height:64px;
+        padding:0 12px;
     }
 
     .logo{
         font-size:20px;
     }
 
+    nav{
+        gap:2px;
+    }
+
     nav button{
-        padding:8px;
+        padding:8px 7px;
         font-size:11px;
     }
 
     .hero{
-        margin:15px 12px;
+        margin:14px 12px;
+
+        min-height:310px;
+
         padding:35px 20px;
-        min-height:280px;
+
+        border-radius:19px;
     }
 
     .hero h1{
-        font-size:38px;
+        font-size:39px;
     }
 
-    .container{
-        padding:0 12px 40px;
-    }
-
-    .carGrid{
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:10px;
-    }
-
-    .carImage{
-        height:125px;
-    }
-
-    .carInfo{
-        padding:10px;
-    }
-
-    .carName{
+    .hero p{
         font-size:14px;
     }
 
-    .carPrice{
-        font-size:17px;
+    .container{
+        padding:0 12px 45px;
+    }
+
+    .storeHeader{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .searchBox{
+        padding:10px;
+    }
+
+    .search,
+    .filter{
+        width:100%;
+    }
+
+    .infoGrid{
+        grid-template-columns:1fr;
     }
 
     .emptyStore{
-        min-height:250px;
+        min-height:280px;
     }
 
 }
@@ -414,13 +570,16 @@ footer{
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="nav">
 
-<div class="logo">
+<div
+class="logo">
 PRDX<span>STORE</span>
 </div>
 
@@ -433,18 +592,13 @@ Ana Sayfa
 </button>
 
 <button
-onclick="showCategory('JDM')">
-JDM
+onclick="scrollToStore()">
+Mağaza
 </button>
 
 <button
-onclick="showCategory('Spor')">
-Spor
-</button>
-
-<button
-onclick="showCategory('SUV')">
-SUV
+onclick="scrollToInfo()">
+Hakkında
 </button>
 
 </nav>
@@ -454,7 +608,9 @@ SUV
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -463,67 +619,89 @@ PRDX <span>STORE</span>
 </h1>
 
 <p>
-CPM araçlarının yeni adresi.
-Araçları keşfet, fiyatları incele ve
-PRDX STORE dünyasına göz at.
+PRDX STORE'a hoş geldin. Modern, hızlı ve
+kullanımı kolay mağaza altyapısı.
+Buradaki içerikler daha sonra eklenecek.
 </p>
+
+<div class="heroButtons">
 
 <button
 class="heroButton"
 onclick="scrollToStore()">
 
-🚗 Mağazaya Göz At
+Mağazaya Git
 
 </button>
+
+<button
+class="heroButton dark"
+onclick="scrollToInfo()">
+
+PRDX STORE
+
+</button>
+
+</div>
 
 </section>
 
 
-<!-- STORE -->
+<!-- =========================
+     STORE
+========================= -->
 
 <div
 class="container"
 id="store">
 
 
-<!-- SEARCH -->
+<div class="storeHeader">
 
-<div class="searchArea">
+<h2>
+Mağaza
+</h2>
+
+<div class="status">
+
+<div class="statusDot"></div>
+
+Sistem aktif
+
+</div>
+
+</div>
+
+
+<!-- ARAMA -->
+
+<div class="searchBox">
 
 <input
-class="search"
 id="search"
+class="search"
 type="text"
-placeholder="🔎 Araç ara..."
-oninput="searchStore()"
+placeholder="🔎 Arama..."
 >
 
 <select
 id="category"
-onchange="filterCategory()">
+class="filter">
 
-<option value="all">
-Tüm Kategoriler
+<option>
+Kategori
 </option>
 
-<option value="JDM">
-JDM
+<option>
+Tümü
 </option>
 
-<option value="Spor">
-Spor
+<option>
+Yeni
 </option>
 
-<option value="SUV">
-SUV
-</option>
-
-<option value="Sedan">
-Sedan
-</option>
-
-<option value="Klasik">
-Klasik
+<option>
+Popüler
 </option>
 
 </select>
@@ -531,90 +709,125 @@ Klasik
 </div>
 
 
-<!-- TITLE -->
-
-<div class="sectionTitle">
-
-<h2>
-🔥 PRDX STORE
-</h2>
-
-<span id="count">
-0 ilan
-</span>
-
-</div>
-
-
-<!-- EMPTY AREA -->
+<!-- BOŞ ALAN -->
 
 <div
 class="emptyStore"
 id="emptyStore">
 
 <div class="emptyIcon">
-🚗
+🛒
 </div>
 
 <h3>
-Mağaza hazırlanıyor
+Mağaza henüz hazır değil
 </h3>
 
 <p>
-PRDX STORE'da yayınlanacak araçlar
-buraya eklenecek. Araç bilgilerini
-gönderdiğinde mağazaya yerleştirilecek.
+İçerikler daha sonra burada yayınlanacak.
+PRDX STORE'un mağaza altyapısı hazır durumda.
 </p>
 
 </div>
 
 
-<!-- FUTURE CARDS -->
+<!-- SONRADAN İLANLAR -->
 
 <div
-class="carGrid"
-id="carGrid">
+class="listings"
+id="listings">
 
 <!--
-    ARAÇ İLANLARI BURAYA GELECEK.
 
-    Şimdilik boş bırakıldı.
+    İLANLAR BURAYA EKLENECEK.
 
-    Örnek yapı:
-
-    <div class="carCard">
-
-        <img
-        class="carImage"
-        src="FOTOĞRAF"
-        >
-
-        <div class="carInfo">
-
-            <div class="carName">
-                ARAÇ ADI
-            </div>
-
-            <div class="carPrice">
-                FİYAT
-            </div>
-
-            <button class="carButton">
-                Aracı İncele
-            </button>
-
-        </div>
-
-    </div>
+    Şimdilik tamamen boş.
 
 -->
 
 </div>
 
+
+<!-- =========================
+     INFO
+========================= -->
+
+<div
+id="info">
+
+<div class="storeHeader">
+
+<h2>
+PRDX STORE
+</h2>
+
 </div>
 
 
-<!-- FOOTER -->
+<div class="infoGrid">
+
+<div class="infoCard">
+
+<div class="infoCardIcon">
+⚡
+</div>
+
+<h3>
+Hızlı
+</h3>
+
+<p>
+Basit ve hızlı bir mağaza deneyimi.
+</p>
+
+</div>
+
+
+<div class="infoCard">
+
+<div class="infoCardIcon">
+🛒
+</div>
+
+<h3>
+Mağaza
+</h3>
+
+<p>
+İçerikler daha sonra düzenli şekilde
+buraya eklenecek.
+</p>
+
+</div>
+
+
+<div class="infoCard">
+
+<div class="infoCardIcon">
+📱
+</div>
+
+<h3>
+Mobil Uyumlu
+</h3>
+
+<p>
+Telefon, tablet ve bilgisayarlarda
+uyumlu çalışacak şekilde hazırlandı.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -622,11 +835,11 @@ id="carGrid">
 PRDX<span>STORE</span>
 </div>
 
+<div class="footerText">
+Modern mağaza altyapısı
+</div>
+
 <br>
-
-CPM araç mağazası
-
-<br><br>
 
 © 2026 PRDX STORE
 
@@ -635,16 +848,9 @@ CPM araç mağazası
 
 <script>
 
-/*
-========================================
-PRDX STORE ALTYAPI
-========================================
-
-Şimdilik hiçbir araç eklenmedi.
-
-Araç bilgileri daha sonra eklenecek.
-*/
-
+/* =========================
+   NAVIGATION
+========================= */
 
 function scrollToStore(){
 
@@ -657,51 +863,59 @@ function scrollToStore(){
 }
 
 
+function scrollToInfo(){
+
+    document
+    .getElementById("info")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
 function goHome(){
 
-    document
-    .getElementById("category")
-    .value="all";
-
-    document
-    .getElementById("search")
-    .value="";
-
-    scrollToStore();
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
 
-function showCategory(category){
+/* =========================
+   ARAMA ALTYAPISI
+========================= */
 
-    document
-    .getElementById("category")
-    .value=category;
-
-    scrollToStore();
-
-}
-
-
-function searchStore(){
+document
+.getElementById("search")
+.addEventListener("input",function(){
 
     /*
-    Araçlar eklendiğinde
-    arama sistemi burada çalışacak.
+        İlanlar eklendiğinde
+        gerçek arama sistemi burada
+        aktif hale getirilecek.
     */
 
-}
+});
 
 
-function filterCategory(){
+/* =========================
+   KATEGORİ ALTYAPISI
+========================= */
+
+document
+.getElementById("category")
+.addEventListener("change",function(){
 
     /*
-    Araçlar eklendiğinde
-    kategori sistemi burada çalışacak.
+        İlanlar eklendiğinde
+        kategori filtreleme burada
+        aktif hale getirilecek.
     */
 
-}
-
+});
 
 </script>
 
