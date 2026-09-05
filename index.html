@@ -8,361 +8,292 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
- margin:0;
- background:#080808;
- color:#fff;
- font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#080808;
+color:#fff;
+font-family:Arial,Helvetica,sans-serif
 }
-
 header{
- position:sticky;
- top:0;
- z-index:1000;
- height:70px;
- display:flex;
- align-items:center;
- justify-content:space-between;
- padding:0 7%;
- background:rgba(8,8,8,.95);
- border-bottom:1px solid #292929;
- backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7%;
+background:rgba(8,8,8,.95);
+border-bottom:1px solid #292929;
+backdrop-filter:blur(10px)
 }
-
 .logo{
- font-size:25px;
- font-weight:900;
- letter-spacing:2px;
+font-size:25px;
+font-weight:900;
+letter-spacing:2px
 }
-
 .logo span{color:#e50914}
-
 nav a{
- color:#aaa;
- text-decoration:none;
- margin-left:25px;
- font-weight:bold;
+color:#aaa;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold
 }
-
 nav a:hover{color:#e50914}
 
 .hero{
- min-height:430px;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center;
- padding:60px 20px;
- background:
- radial-gradient(circle at center,#330000 0,#150000 28%,#080808 65%);
+min-height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 20px;
+background:radial-gradient(circle at center,#330000 0,#150000 28%,#080808 65%)
 }
-
 .hero h1{
- font-size:clamp(45px,9vw,90px);
- margin:0;
- font-weight:1000;
- letter-spacing:4px;
+font-size:clamp(45px,9vw,90px);
+margin:0;
+font-weight:1000;
+letter-spacing:4px
 }
-
 .hero h1 span{color:#e50914}
-
 .hero p{
- color:#aaa;
- font-size:18px;
- margin:18px 0 28px;
+color:#aaa;
+font-size:18px;
+margin:18px 0 28px
 }
-
 .hero-btn{
- display:inline-block;
- padding:14px 28px;
- border-radius:8px;
- background:#e50914;
- color:#fff;
- text-decoration:none;
- font-weight:900;
- transition:.2s;
+display:inline-block;
+padding:14px 28px;
+border-radius:8px;
+background:#e50914;
+color:#fff;
+text-decoration:none;
+font-weight:900;
+transition:.2s
 }
-
 .hero-btn:hover{
- transform:translateY(-2px);
- background:#ff1b26;
+transform:translateY(-2px);
+background:#ff1b26
 }
 
-.section{
- padding:65px 7%;
-}
-
+.section{padding:65px 7%}
 .section-title{
- text-align:center;
- margin-bottom:35px;
+text-align:center;
+margin-bottom:35px
 }
-
 .section-title h2{
- font-size:36px;
- margin:0 0 10px;
+font-size:36px;
+margin:0 0 10px
 }
-
 .section-title p{
- color:#888;
- margin:0;
+color:#888;
+margin:0
 }
 
 .controls{
- display:flex;
- gap:12px;
- margin-bottom:30px;
- flex-wrap:wrap;
+display:flex;
+gap:12px;
+margin-bottom:30px;
+flex-wrap:wrap
 }
-
 .controls input,
 .controls select{
- flex:1;
- min-width:200px;
- padding:14px;
- border-radius:8px;
- border:1px solid #292929;
- background:#111;
- color:#fff;
- outline:none;
+flex:1;
+min-width:200px;
+padding:14px;
+border-radius:8px;
+border:1px solid #292929;
+background:#111;
+color:#fff;
+outline:none
 }
-
 .controls input:focus,
 .controls select:focus{
- border-color:#e50914;
+border-color:#e50914
 }
 
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
- gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px
 }
-
 .card{
- overflow:hidden;
- background:#111;
- border:1px solid #242424;
- border-radius:14px;
- transition:.25s;
+overflow:hidden;
+background:#111;
+border:1px solid #242424;
+border-radius:14px;
+transition:.25s
 }
-
 .card:hover{
- transform:translateY(-5px);
- border-color:#e50914;
- box-shadow:0 10px 35px rgba(229,9,20,.12);
+transform:translateY(-5px);
+border-color:#e50914;
+box-shadow:0 10px 35px rgba(229,9,20,.12)
 }
-
 .card-img{
- width:100%;
- height:220px;
- object-fit:cover;
- display:block;
- cursor:pointer;
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+cursor:pointer
 }
-
-.card-body{
- padding:18px;
-}
-
+.card-body{padding:18px}
 .card-title{
- font-size:23px;
- font-weight:900;
- margin-bottom:7px;
+font-size:23px;
+font-weight:900;
+margin-bottom:7px
 }
-
 .card-meta{
- color:#888;
- font-size:14px;
- margin-bottom:16px;
+color:#888;
+font-size:14px;
+margin-bottom:16px
 }
-
 .tags{
- display:flex;
- gap:7px;
- flex-wrap:wrap;
- margin-bottom:16px;
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+margin-bottom:16px
 }
-
 .tag{
- background:#1c1c1c;
- color:#ddd;
- border:1px solid #303030;
- border-radius:6px;
- padding:6px 9px;
- font-size:12px;
- font-weight:bold;
+background:#1c1c1c;
+color:#ddd;
+border:1px solid #303030;
+border-radius:6px;
+padding:6px 9px;
+font-size:12px;
+font-weight:bold
 }
-
 .price{
- display:flex;
- align-items:center;
- justify-content:space-between;
+display:flex;
+align-items:center;
+justify-content:space-between
 }
-
 .price strong{
- color:#e50914;
- font-size:24px;
+color:#e50914;
+font-size:24px
 }
-
 .details-btn{
- border:0;
- border-radius:7px;
- padding:10px 15px;
- background:#e50914;
- color:#fff;
- font-weight:900;
- cursor:pointer;
+border:0;
+border-radius:7px;
+padding:10px 15px;
+background:#e50914;
+color:#fff;
+font-weight:900;
+cursor:pointer
 }
-
-.details-btn:hover{
- background:#ff1b26;
-}
+.details-btn:hover{background:#ff1b26}
 
 .info{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px
 }
-
 .info-box{
- background:#101010;
- border:1px solid #252525;
- border-radius:12px;
- padding:25px;
- text-align:center;
+background:#101010;
+border:1px solid #252525;
+border-radius:12px;
+padding:25px;
+text-align:center
 }
-
 .info-box .icon{
- font-size:32px;
- margin-bottom:12px;
+font-size:32px;
+margin-bottom:12px
 }
-
-.info-box h3{
- margin:0 0 8px;
-}
-
+.info-box h3{margin:0 0 8px}
 .info-box p{
- color:#888;
- line-height:1.5;
- margin:0;
+color:#888;
+line-height:1.5;
+margin:0
 }
 
 footer{
- border-top:1px solid #242424;
- padding:30px 7%;
- text-align:center;
- color:#666;
+border-top:1px solid #242424;
+padding:30px 7%;
+text-align:center;
+color:#666
 }
-
-/* GALERİ */
 
 .modal{
- position:fixed;
- inset:0;
- z-index:2000;
- display:none;
- align-items:center;
- justify-content:center;
- padding:20px;
- background:rgba(0,0,0,.92);
+position:fixed;
+inset:0;
+z-index:2000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:rgba(0,0,0,.92)
 }
-
-.modal.active{
- display:flex;
-}
-
+.modal.active{display:flex}
 .modal-content{
- width:min(1000px,100%);
- max-height:95vh;
- position:relative;
+width:min(1000px,100%);
+max-height:95vh;
+position:relative
 }
-
 .gallery-main{
- width:100%;
- height:min(65vh,600px);
- object-fit:contain;
- border-radius:10px;
- background:#050505;
+width:100%;
+height:min(65vh,600px);
+object-fit:contain;
+border-radius:10px;
+background:#050505
 }
-
 .close{
- position:absolute;
- right:0;
- top:-45px;
- border:0;
- background:none;
- color:#fff;
- font-size:35px;
- cursor:pointer;
+position:absolute;
+right:0;
+top:-45px;
+border:0;
+background:none;
+color:#fff;
+font-size:35px;
+cursor:pointer
 }
-
 .arrow{
- position:absolute;
- top:50%;
- transform:translateY(-50%);
- width:45px;
- height:45px;
- border:0;
- border-radius:50%;
- background:rgba(229,9,20,.9);
- color:#fff;
- font-size:25px;
- cursor:pointer;
- z-index:5;
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:45px;
+height:45px;
+border:0;
+border-radius:50%;
+background:rgba(229,9,20,.9);
+color:#fff;
+font-size:25px;
+cursor:pointer;
+z-index:5
 }
-
 .prev{left:15px}
 .next{right:15px}
 
 .thumbs{
- display:flex;
- justify-content:center;
- gap:10px;
- margin-top:12px;
- overflow-x:auto;
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:12px;
+overflow-x:auto
 }
-
 .thumbs img{
- width:80px;
- height:55px;
- object-fit:cover;
- border-radius:6px;
- opacity:.55;
- cursor:pointer;
- border:2px solid transparent;
+width:80px;
+height:55px;
+object-fit:cover;
+border-radius:6px;
+opacity:.55;
+cursor:pointer;
+border:2px solid transparent
 }
-
 .thumbs img.active{
- opacity:1;
- border-color:#e50914;
+opacity:1;
+border-color:#e50914
 }
 
 @media(max-width:650px){
-
- header{
-  padding:0 5%;
- }
-
- nav a{
-  margin-left:12px;
-  font-size:13px;
- }
-
- .section{
-  padding:50px 5%;
- }
-
- .hero{
-  min-height:380px;
- }
-
- .card-img{
-  height:200px;
- }
-
- .close{
-  top:-40px;
- }
+header{padding:0 5%}
+nav a{
+margin-left:12px;
+font-size:13px
+}
+.section{padding:50px 5%}
+.hero{min-height:380px}
+.card-img{height:200px}
+.close{top:-40px}
 }
 </style>
 </head>
@@ -370,651 +301,415 @@ footer{
 <body>
 
 <header>
+<div class="logo">PRDX<span>STORE</span></div>
 
- <div class="logo">
-  PRDX<span>STORE</span>
- </div>
-
- <nav>
-  <a href="#store">Mağaza</a>
-  <a href="#info">Hakkımızda</a>
- </nav>
-
+<nav>
+<a href="#store">Mağaza</a>
+<a href="#info">Hakkımızda</a>
+</nav>
 </header>
 
 
 <section class="hero">
-
- <div>
-
-  <h1>
-   PRDX<span>STORE</span>
-  </h1>
-
-  <p>
-   CPM araçlarının yeni adresi.
-  </p>
-
-  <a class="hero-btn" href="#store">
-   ARAÇLARI KEŞFET
-  </a>
-
- </div>
-
+<div>
+<h1>PRDX<span>STORE</span></h1>
+<p>CPM araçlarının yeni adresi.</p>
+<a class="hero-btn" href="#store">ARAÇLARI KEŞFET</a>
+</div>
 </section>
 
 
 <section class="section" id="store">
 
- <div class="section-title">
+<div class="section-title">
+<h2>ARAÇ MAĞAZASI</h2>
+<p>Beğendiğin aracı seç ve detaylarını incele.</p>
+</div>
 
-  <h2>ARAÇ MAĞAZASI</h2>
+<div class="controls">
 
-  <p>
-   Beğendiğin aracı seç ve detaylarını incele.
-  </p>
+<input
+type="text"
+id="search"
+placeholder="Araç, marka veya model ara..."
+oninput="renderListings()"
+>
 
- </div>
+<select id="category" onchange="renderListings()">
+<option value="all">Tüm Kategoriler</option>
+<option value="JDM">JDM</option>
+</select>
 
+</div>
 
- <div class="controls">
-
-  <input
-   type="text"
-   id="search"
-   placeholder="Araç, marka veya model ara..."
-   oninput="renderListings()"
-  >
-
-  <select
-   id="category"
-   onchange="renderListings()"
-  >
-
-   <option value="all">
-    Tüm Kategoriler
-   </option>
-
-   <option value="JDM">
-    JDM
-   </option>
-
-  </select>
-
- </div>
-
-
- <div
-  class="grid"
-  id="listingGrid"
- ></div>
+<div class="grid" id="listingGrid"></div>
 
 </section>
 
 
-<section
- class="section"
- id="info"
->
+<section class="section" id="info">
 
- <div class="section-title">
+<div class="section-title">
+<h2>NEDEN PRDX STORE?</h2>
+<p>CPM araçlarını kolayca keşfet.</p>
+</div>
 
-  <h2>NEDEN PRDX STORE?</h2>
+<div class="info">
 
-  <p>
-   CPM araçlarını kolayca keşfet.
-  </p>
+<div class="info-box">
+<div class="icon">🚗</div>
+<h3>Özel Araçlar</h3>
+<p>Birbirinden farklı CPM araçlarını tek yerde bul.</p>
+</div>
 
- </div>
+<div class="info-box">
+<div class="icon">⚡</div>
+<h3>Güçlü Modeller</h3>
+<p>Performans bilgileri ve araç detaylarını incele.</p>
+</div>
 
+<div class="info-box">
+<div class="icon">📸</div>
+<h3>Detaylı Galeri</h3>
+<p>Her aracın fotoğraflarını galeri üzerinden görüntüle.</p>
+</div>
 
- <div class="info">
+<div class="info-box">
+<div class="icon">🔥</div>
+<h3>PRDX STORE</h3>
+<p>CPM topluluğu için hazırlanmış özel araç mağazası.</p>
+</div>
 
-  <div class="info-box">
-
-   <div class="icon">🚗</div>
-
-   <h3>Özel Araçlar</h3>
-
-   <p>
-    Birbirinden farklı CPM araçlarını tek yerde bul.
-   </p>
-
-  </div>
-
-
-  <div class="info-box">
-
-   <div class="icon">⚡</div>
-
-   <h3>Güçlü Modeller</h3>
-
-   <p>
-    Performans bilgileri ve araç detaylarını incele.
-   </p>
-
-  </div>
-
-
-  <div class="info-box">
-
-   <div class="icon">📸</div>
-
-   <h3>Detaylı Galeri</h3>
-
-   <p>
-    Her aracın fotoğraflarını galeri üzerinden görüntüle.
-   </p>
-
-  </div>
-
-
-  <div class="info-box">
-
-   <div class="icon">🔥</div>
-
-   <h3>PRDX STORE</h3>
-
-   <p>
-    CPM topluluğu için hazırlanmış özel araç mağazası.
-   </p>
-
-  </div>
-
- </div>
-
+</div>
 </section>
 
 
 <footer>
-
- © 2026 PRDX STORE — Tüm hakları saklıdır.
-
+© 2026 PRDX STORE — Tüm hakları saklıdır.
 </footer>
 
 
-<!-- GALERİ MODALI -->
+<div class="modal" id="galleryModal" onclick="outsideClose(event)">
 
-<div
- class="modal"
- id="galleryModal"
- onclick="outsideClose(event)"
+<div class="modal-content">
+
+<button class="close" onclick="closeGallery()">×</button>
+
+<button class="arrow prev" onclick="changePhoto(-1)">‹</button>
+
+<img
+id="galleryMain"
+class="gallery-main"
+src=""
+alt="Araç fotoğrafı"
 >
 
- <div class="modal-content">
+<button class="arrow next" onclick="changePhoto(1)">›</button>
 
-  <button
-   class="close"
-   onclick="closeGallery()"
-  >
-   ×
-  </button>
+<div class="thumbs" id="thumbs"></div>
 
-
-  <button
-   class="arrow prev"
-   onclick="changePhoto(-1)"
-  >
-   ‹
-  </button>
-
-
-  <img
-   id="galleryMain"
-   class="gallery-main"
-   src=""
-   alt="Araç fotoğrafı"
-  >
-
-
-  <button
-   class="arrow next"
-   onclick="changePhoto(1)"
-  >
-   ›
-  </button>
-
-
-  <div
-   class="thumbs"
-   id="thumbs"
-  ></div>
-
- </div>
-
+</div>
 </div>
 
 
 <script>
 
-/* =========================
-   ARAÇLAR
-========================= */
+const listings=[
 
-const listings = [
+{
+id:1,
+brand:"Honda",
+model:"VTEC2",
+year:"2026 Model",
+power:"1000+ HP",
+category:"JDM",
+price:"55 TL",
+photos:[
+"https://i.hizliresim.com/rsltqjlh.jpg",
+"https://i.hizliresim.com/lpihth8y.jpg",
+"https://i.hizliresim.com/drosofcc.jpg",
+"https://i.hizliresim.com/ersfg7ij.jpg"
+]
+},
 
- {
-  id:1,
+{
+id:2,
+brand:"Ford",
+model:"Transit",
+year:"2026 Model",
+power:"250+ HP",
+category:"JDM",
+price:"45 TL",
+photos:[
+"https://i.hizliresim.com/hgzfjvcm.jpg",
+"https://i.hizliresim.com/ilcq4hed.jpg"
+]
+},
 
-  brand:"Honda",
+{
+id:3,
+brand:"Volkswagen",
+model:"Passat",
+year:"2025 Model",
+power:"400+ HP",
+category:"JDM",
+price:"45 TL",
+photos:[
+"https://i.hizliresim.com/ksrokooz.jpg",
+"https://i.hizliresim.com/yyigtr9b.jpg"
+]
+},
 
-  model:"VTEC2",
-
-  year:"2026 Model",
-
-  power:"1000+ HP",
-
-  category:"JDM",
-
-  price:"55 TL",
-
-  photos:[
-   "https://i.hizliresim.com/rsltqjlh.jpg",
-   "https://i.hizliresim.com/lpihth8y.jpg",
-   "https://i.hizliresim.com/drosofcc.jpg",
-   "https://i.hizliresim.com/ersfg7ij.jpg"
-  ]
- },
-
-
- {
-  id:2,
-
-  brand:"Ford",
-
-  model:"Transit",
-
-  year:"2026 Model",
-
-  power:"250+ HP",
-
-  category:"JDM",
-
-  price:"45 TL",
-
-  photos:[
-   "https://i.hizliresim.com/hgzfjvcm.jpg",
-   "https://i.hizliresim.com/ilcq4hed.jpg"
-  ]
- },
-
-
- {
-  id:3,
-
-  brand:"Volkswagen",
-
-  model:"Passat",
-
-  year:"2025 Model",
-
-  power:"400+ HP",
-
-  category:"JDM",
-
-  price:"45 TL",
-
-  photos:[
-   "https://i.hizliresim.com/ksrokooz.jpg",
-   "https://i.hizliresim.com/yyigtr9b.jpg"
-  ]
- }
+{
+id:4,
+brand:"Tofaş",
+model:"Kartal",
+year:"2025 Model",
+power:"320+ HP",
+category:"JDM",
+price:"45 TL",
+photos:[
+"https://i.hizliresim.com/ipoamje4.jpg",
+"https://i.hizliresim.com/evt5zb15.jpg"
+]
+}
 
 ];
 
 
-let currentListing = null;
-let currentPhoto = 0;
+let currentListing=null;
+let currentPhoto=0;
 
-
-/* =========================
-   İLANLARI GÖSTER
-========================= */
 
 function renderListings(){
 
- const grid =
-  document.getElementById("listingGrid");
+const grid=document.getElementById("listingGrid");
 
- const search =
-  document
-   .getElementById("search")
-   .value
-   .toLowerCase()
-   .trim();
+const search=document
+.getElementById("search")
+.value
+.toLowerCase()
+.trim();
 
- const category =
-  document.getElementById("category").value;
+const category=document
+.getElementById("category")
+.value;
 
+const filtered=listings.filter(item=>{
 
- const filtered =
-  listings.filter(item => {
+const text=(
+item.brand+" "+
+item.model+" "+
+item.year+" "+
+item.power+" "+
+item.category
+).toLowerCase();
 
-   const text = (
+const searchOK=text.includes(search);
 
-    item.brand + " " +
-    item.model + " " +
-    item.year + " " +
-    item.power + " " +
-    item.category
+const categoryOK=
+category==="all"||
+item.category===category;
 
-   ).toLowerCase();
+return searchOK&&categoryOK;
 
+});
 
-   const searchOK =
-    text.includes(search);
+grid.innerHTML="";
 
+if(filtered.length===0){
 
-   const categoryOK =
-    category === "all" ||
-    item.category === category;
+grid.innerHTML=`
+<div style="
+grid-column:1/-1;
+text-align:center;
+padding:50px;
+color:#777;
+">
+<h3>Araç bulunamadı.</h3>
+<p>Arama kriterlerini değiştirmeyi dene.</p>
+</div>
+`;
 
-
-   return searchOK && categoryOK;
-
-  });
-
-
- grid.innerHTML = "";
-
-
- if(filtered.length === 0){
-
-  grid.innerHTML = `
-
-   <div style="
-    grid-column:1/-1;
-    text-align:center;
-    padding:50px;
-    color:#777;
-   ">
-
-    <h3>
-     Araç bulunamadı.
-    </h3>
-
-    <p>
-     Arama kriterlerini değiştirmeyi dene.
-    </p>
-
-   </div>
-
-  `;
-
-  return;
- }
-
-
- filtered.forEach(item => {
-
-  const card =
-   document.createElement("div");
-
-  card.className = "card";
-
-
-  card.innerHTML = `
-
-   <img
-    class="card-img"
-    src="${item.photos[0]}"
-    alt="${item.brand} ${item.model}"
-    onclick="openGallery(${item.id})"
-   >
-
-
-   <div class="card-body">
-
-    <div class="card-title">
-
-     ${item.brand}
-     ${item.model}
-
-    </div>
-
-
-    <div class="card-meta">
-
-     ${item.brand}
-     •
-     ${item.model}
-     •
-     ${item.year}
-
-    </div>
-
-
-    <div class="tags">
-
-     <span class="tag">
-      ${item.power}
-     </span>
-
-     <span class="tag">
-      ${item.category}
-     </span>
-
-     <span class="tag">
-      ${item.year}
-     </span>
-
-    </div>
-
-
-    <div class="price">
-
-     <strong>
-      ${item.price}
-     </strong>
-
-
-     <button
-      class="details-btn"
-      onclick="openGallery(${item.id})"
-     >
-      FOTOĞRAFLAR
-     </button>
-
-    </div>
-
-   </div>
-
-  `;
-
-
-  grid.appendChild(card);
-
- });
-
+return;
 }
 
 
-/* =========================
-   GALERİYİ AÇ
-========================= */
+filtered.forEach(item=>{
+
+const card=document.createElement("div");
+
+card.className="card";
+
+card.innerHTML=`
+
+<img
+class="card-img"
+src="${item.photos[0]}"
+alt="${item.brand} ${item.model}"
+onclick="openGallery(${item.id})"
+>
+
+<div class="card-body">
+
+<div class="card-title">
+${item.brand} ${item.model}
+</div>
+
+<div class="card-meta">
+${item.brand} • ${item.model} • ${item.year}
+</div>
+
+<div class="tags">
+
+<span class="tag">
+${item.power}
+</span>
+
+<span class="tag">
+${item.category}
+</span>
+
+<span class="tag">
+${item.year}
+</span>
+
+</div>
+
+<div class="price">
+
+<strong>
+${item.price}
+</strong>
+
+<button
+class="details-btn"
+onclick="openGallery(${item.id})"
+>
+FOTOĞRAFLAR
+</button>
+
+</div>
+
+</div>
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
 
 function openGallery(id){
 
- currentListing =
-  listings.find(item => item.id === id);
+currentListing=
+listings.find(item=>item.id===id);
 
+if(!currentListing)return;
 
- if(!currentListing) return;
+currentPhoto=0;
 
+updateGallery();
 
- currentPhoto = 0;
+document
+.getElementById("galleryModal")
+.classList.add("active");
 
- updateGallery();
-
-
- document
-  .getElementById("galleryModal")
-  .classList.add("active");
-
-
- document.body.style.overflow = "hidden";
+document.body.style.overflow="hidden";
 }
 
-
-/* =========================
-   GALERİYİ GÜNCELLE
-========================= */
 
 function updateGallery(){
 
- const main =
-  document.getElementById("galleryMain");
+const main=
+document.getElementById("galleryMain");
 
+main.src=
+currentListing.photos[currentPhoto];
 
- main.src =
-  currentListing.photos[currentPhoto];
+const thumbs=
+document.getElementById("thumbs");
 
+thumbs.innerHTML="";
 
- const thumbs =
-  document.getElementById("thumbs");
+currentListing.photos.forEach((photo,index)=>{
 
+const img=document.createElement("img");
 
- thumbs.innerHTML = "";
+img.src=photo;
 
+if(index===currentPhoto){
+img.classList.add("active");
+}
 
- currentListing.photos.forEach(
-  (photo,index) => {
+img.onclick=()=>{
+currentPhoto=index;
+updateGallery();
+};
 
-   const img =
-    document.createElement("img");
+thumbs.appendChild(img);
 
-
-   img.src = photo;
-
-
-   if(index === currentPhoto){
-
-    img.classList.add("active");
-
-   }
-
-
-   img.onclick = () => {
-
-    currentPhoto = index;
-
-    updateGallery();
-
-   };
-
-
-   thumbs.appendChild(img);
-
-  }
- );
+});
 
 }
 
-
-/* =========================
-   FOTOĞRAF DEĞİŞTİR
-========================= */
 
 function changePhoto(direction){
 
- if(!currentListing) return;
+if(!currentListing)return;
 
+currentPhoto+=direction;
 
- currentPhoto += direction;
-
-
- if(currentPhoto < 0){
-
-  currentPhoto =
-   currentListing.photos.length - 1;
-
- }
-
-
- if(
-  currentPhoto >=
-  currentListing.photos.length
- ){
-
-  currentPhoto = 0;
-
- }
-
-
- updateGallery();
+if(currentPhoto<0){
+currentPhoto=currentListing.photos.length-1;
 }
 
+if(currentPhoto>=currentListing.photos.length){
+currentPhoto=0;
+}
 
-/* =========================
-   GALERİYİ KAPAT
-========================= */
+updateGallery();
+}
+
 
 function closeGallery(){
 
- document
-  .getElementById("galleryModal")
-  .classList.remove("active");
+document
+.getElementById("galleryModal")
+.classList.remove("active");
 
+document.body.style.overflow="";
 
- document.body.style.overflow = "";
-
- currentListing = null;
+currentListing=null;
 }
 
-
-/* =========================
-   DIŞARI TIKLAYINCA KAPAT
-========================= */
 
 function outsideClose(event){
 
- if(
-  event.target.id ===
-  "galleryModal"
- ){
-
-  closeGallery();
-
- }
+if(event.target.id==="galleryModal"){
+closeGallery();
+}
 
 }
 
 
-/* =========================
-   KLAVYE KONTROLLERİ
-========================= */
+document.addEventListener("keydown",event=>{
 
-document.addEventListener(
- "keydown",
- event => {
+if(event.key==="Escape"){
+closeGallery();
+}
 
-  if(event.key === "Escape"){
+if(event.key==="ArrowRight"){
+changePhoto(1);
+}
 
-   closeGallery();
+if(event.key==="ArrowLeft"){
+changePhoto(-1);
+}
 
-  }
+});
 
-
-  if(event.key === "ArrowRight"){
-
-   changePhoto(1);
-
-  }
-
-
-  if(event.key === "ArrowLeft"){
-
-   changePhoto(-1);
-
-  }
-
- }
-);
-
-
-/* =========================
-   BAŞLAT
-========================= */
 
 renderListings();
 
