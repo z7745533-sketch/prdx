@@ -2,57 +2,32 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>PRDX STORE</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
   background:#080808;
   color:#fff;
   font-family:Arial,Helvetica,sans-serif;
-  min-height:100vh;
 }
-
-button,
-input,
-select{
-  font:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* HEADER */
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
 
 .header{
   position:sticky;
   top:0;
   z-index:1000;
-  height:68px;
-  background:rgba(8,8,8,.96);
-  border-bottom:1px solid #242424;
+  height:65px;
+  padding:0 18px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 18px;
-  backdrop-filter:blur(12px);
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid #252525;
+  backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -60,49 +35,43 @@ a{
   font-weight:900;
   letter-spacing:2px;
 }
-
-.logo span{
-  color:#ff1d25;
-}
+.logo span{color:#ff1e25}
 
 .header-right{
   display:flex;
   gap:9px;
-  align-items:center;
 }
 
 .icon-btn{
   position:relative;
-  width:43px;
-  height:43px;
+  width:42px;
+  height:42px;
+  border-radius:12px;
   border:1px solid #333;
   background:#111;
-  color:white;
-  border-radius:12px;
-  font-size:19px;
-  transition:.2s;
+  color:#fff;
+  font-size:20px;
 }
 
 .icon-btn:hover{
-  border-color:#ff1d25;
-  transform:translateY(-2px);
+  border-color:#ff1e25;
 }
 
 .badge{
   position:absolute;
-  top:-5px;
   right:-5px;
+  top:-5px;
   min-width:18px;
   height:18px;
   padding:0 4px;
-  border-radius:20px;
-  background:#ff1d25;
-  color:#fff;
-  font-size:11px;
-  font-weight:bold;
   display:none;
   align-items:center;
   justify-content:center;
+  border-radius:20px;
+  background:#ff1e25;
+  color:#fff;
+  font-size:11px;
+  font-weight:bold;
 }
 
 /* HERO */
@@ -111,24 +80,20 @@ a{
   padding:70px 20px;
   text-align:center;
   background:
-    radial-gradient(circle at center,#4d0808 0,#180303 28%,#080808 68%);
-  border-bottom:1px solid #1b1b1b;
+  radial-gradient(circle,#500707 0,#180303 30%,#080808 70%);
 }
 
 .hero h1{
-  font-size:clamp(38px,8vw,76px);
+  font-size:clamp(40px,8vw,75px);
   font-weight:1000;
   letter-spacing:4px;
 }
 
-.hero h1 span{
-  color:#ff1d25;
-}
+.hero h1 span{color:#ff1e25}
 
 .hero p{
-  margin-top:14px;
   color:#aaa;
-  font-size:15px;
+  margin-top:12px;
 }
 
 /* STORE */
@@ -141,10 +106,10 @@ a{
 
 .store-top{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   gap:15px;
-  margin-bottom:20px;
+  margin-bottom:22px;
   flex-wrap:wrap;
 }
 
@@ -153,45 +118,37 @@ a{
   font-weight:900;
 }
 
-.section-title span{
-  color:#ff1d25;
-}
+.section-title span{color:#ff1e25}
 
 .filters{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
+}
+
+.search,
+.category-select{
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  border-radius:10px;
+  padding:12px 14px;
+  outline:none;
 }
 
 .search{
   width:240px;
-  max-width:100%;
-  background:#111;
-  color:#fff;
-  border:1px solid #333;
-  border-radius:11px;
-  padding:12px 14px;
-  outline:none;
-}
-
-.search:focus{
-  border-color:#ff1d25;
 }
 
 .category-select{
-  background:#111;
-  color:white;
-  border:1px solid #333;
-  border-radius:11px;
-  padding:12px 14px;
-  outline:none;
+  width:170px;
 }
 
+.search:focus,
 .category-select:focus{
-  border-color:#ff1d25;
+  border-color:#ff1e25;
 }
 
-/* GRID */
+/* CARDS */
 
 .grid{
   display:grid;
@@ -201,24 +158,22 @@ a{
 
 .card{
   background:#111;
-  border:1px solid #262626;
+  border:1px solid #292929;
   border-radius:17px;
   overflow:hidden;
-  position:relative;
-  transition:.25s;
+  transition:.2s;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  border-color:#ff1d25;
-  box-shadow:0 15px 45px rgba(255,0,0,.12);
+  border-color:#ff1e25;
+  box-shadow:0 15px 40px rgba(255,0,0,.12);
 }
 
 .card-img{
   height:235px;
   position:relative;
   background:#050505;
-  overflow:hidden;
 }
 
 .card-img img{
@@ -232,24 +187,19 @@ a{
   position:absolute;
   top:12px;
   right:12px;
-  z-index:5;
   width:40px;
   height:40px;
-  border:1px solid rgba(255,255,255,.18);
-  background:rgba(0,0,0,.72);
-  color:#fff;
   border-radius:50%;
-  font-size:20px;
-  transition:.2s;
-}
-
-.favorite-btn:hover{
-  transform:scale(1.08);
+  border:1px solid #555;
+  background:rgba(0,0,0,.75);
+  color:white;
+  font-size:21px;
+  z-index:5;
 }
 
 .favorite-btn.active{
-  color:#ff1d25;
-  border-color:#ff1d25;
+  color:#ff1e25;
+  border-color:#ff1e25;
 }
 
 .card-body{
@@ -264,11 +214,11 @@ a{
 
 .category{
   display:inline-block;
+  background:#280506;
+  color:#ff5055;
+  border:1px solid #5b1115;
   padding:5px 9px;
   border-radius:7px;
-  background:#250506;
-  color:#ff4a50;
-  border:1px solid #591015;
   font-size:11px;
   font-weight:bold;
   margin-bottom:13px;
@@ -278,13 +228,12 @@ a{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:8px;
-  margin-bottom:15px;
 }
 
 .info{
-  background:#181818;
-  border-radius:8px;
+  background:#191919;
   padding:9px;
+  border-radius:8px;
 }
 
 .info small{
@@ -299,10 +248,10 @@ a{
 }
 
 .price{
+  color:#ff1e25;
   font-size:25px;
-  color:#ff1d25;
   font-weight:1000;
-  margin-bottom:13px;
+  margin:15px 0;
 }
 
 .details-btn{
@@ -313,33 +262,22 @@ a{
   background:#e9161e;
   color:#fff;
   font-weight:900;
-  transition:.2s;
 }
 
 .details-btn:hover{
   background:#ff3037;
-  transform:translateY(-1px);
 }
 
-.no-result{
-  grid-column:1/-1;
-  text-align:center;
-  padding:50px 20px;
-  border:1px dashed #333;
-  border-radius:15px;
-  color:#777;
-}
-
-/* INSTAGRAM */
+/* CONTACT */
 
 .contact-box{
   width:min(900px,94%);
   margin:0 auto 55px;
-  padding:25px;
+  padding:28px;
+  text-align:center;
+  background:#101010;
   border:1px solid #292929;
   border-radius:18px;
-  background:linear-gradient(135deg,#121212,#090909);
-  text-align:center;
 }
 
 .contact-box h2{
@@ -352,82 +290,59 @@ a{
 }
 
 .instagram-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
+  display:inline-block;
   padding:13px 22px;
-  background:#e9161e;
   border-radius:11px;
+  background:#e9161e;
   font-weight:900;
 }
 
 /* INFO */
 
 .info-section{
-  border-top:1px solid #1c1c1c;
-  border-bottom:1px solid #1c1c1c;
   padding:45px 20px;
   text-align:center;
   background:#0b0b0b;
-}
-
-.info-section h2{
-  margin-bottom:12px;
+  border-top:1px solid #1d1d1d;
+  border-bottom:1px solid #1d1d1d;
 }
 
 .info-section p{
   max-width:750px;
-  margin:auto;
+  margin:12px auto 0;
   color:#888;
   line-height:1.7;
 }
 
-/* FOOTER */
-
 .footer{
-  padding:28px 20px;
+  padding:28px;
   text-align:center;
   color:#666;
   font-size:13px;
 }
 
-/* OVERLAYS */
+/* PANEL */
 
 .overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.72);
   z-index:2000;
+  background:rgba(0,0,0,.75);
   display:none;
 }
 
-.overlay.show{
-  display:block;
-}
-
-/* PANEL */
+.overlay.show{display:block}
 
 .panel{
   position:absolute;
-  top:0;
   right:0;
+  top:0;
   width:min(390px,92vw);
   height:100%;
+  padding:20px;
   background:#101010;
   border-left:1px solid #292929;
-  padding:20px;
-  overflow-y:auto;
-  animation:panelIn .2s ease;
-}
-
-@keyframes panelIn{
-  from{
-    transform:translateX(100%);
-  }
-  to{
-    transform:translateX(0);
-  }
+  overflow:auto;
 }
 
 .panel-head{
@@ -437,10 +352,6 @@ a{
   margin-bottom:20px;
 }
 
-.panel-head h2{
-  font-size:21px;
-}
-
 .close-btn{
   width:38px;
   height:38px;
@@ -448,22 +359,23 @@ a{
   border-radius:10px;
   background:#181818;
   color:#fff;
-  font-size:20px;
+  font-size:21px;
 }
 
 .panel-empty{
-  color:#777;
+  padding:45px 10px;
   text-align:center;
-  padding:40px 10px;
+  color:#777;
 }
 
 .panel-item{
   display:flex;
-  gap:11px;
+  align-items:center;
+  gap:10px;
   padding:12px;
   margin-bottom:10px;
-  background:#171717;
-  border:1px solid #282828;
+  background:#181818;
+  border:1px solid #292929;
   border-radius:12px;
 }
 
@@ -489,31 +401,10 @@ a{
 }
 
 .remove-fav{
-  align-self:center;
   border:0;
   background:transparent;
-  color:#ff1d25;
-  font-size:18px;
-}
-
-/* NOTIFICATION */
-
-.notification-item{
-  padding:15px;
-  margin-bottom:10px;
-  border-radius:12px;
-  background:#171717;
-  border:1px solid #292929;
-}
-
-.notification-item b{
-  display:block;
-  margin-bottom:5px;
-}
-
-.notification-item span{
-  color:#888;
-  font-size:12px;
+  color:#ff1e25;
+  font-size:20px;
 }
 
 /* GALLERY */
@@ -535,38 +426,37 @@ a{
 .gallery-box{
   width:min(1050px,96vw);
   height:min(850px,94vh);
-  position:relative;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  align-items:center;
+  position:relative;
 }
 
 .gallery-close{
   position:absolute;
-  top:4px;
+  top:0;
   right:0;
   width:45px;
   height:45px;
+  border-radius:50%;
   border:1px solid #444;
   background:#151515;
-  color:white;
-  border-radius:50%;
+  color:#fff;
   font-size:28px;
   z-index:10;
 }
 
 .gallery-main{
+  position:relative;
   width:100%;
   height:min(620px,70vh);
-  position:relative;
+  background:#050505;
+  border:1px solid #222;
+  border-radius:15px;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:#050505;
-  border-radius:15px;
   overflow:hidden;
-  border:1px solid #222;
 }
 
 .gallery-img{
@@ -574,7 +464,6 @@ a{
   height:100%;
   object-fit:contain;
   display:block;
-  transition:none;
 }
 
 .gallery-arrow{
@@ -583,11 +472,11 @@ a{
   transform:translateY(-50%);
   width:50px;
   height:50px;
-  border:1px solid rgba(255,255,255,.2);
-  background:rgba(0,0,0,.72);
-  color:#fff;
   border-radius:50%;
-  font-size:28px;
+  border:1px solid #555;
+  background:rgba(0,0,0,.75);
+  color:#fff;
+  font-size:29px;
   z-index:5;
 }
 
@@ -595,20 +484,13 @@ a{
   background:#e9161e;
 }
 
-.gallery-left{
-  left:15px;
-}
-
-.gallery-right{
-  right:15px;
-}
+.gallery-left{left:15px}
+.gallery-right{right:15px}
 
 .gallery-info{
-  width:100%;
-  padding:12px 3px 7px;
   display:flex;
   justify-content:space-between;
-  gap:10px;
+  padding:12px 3px 7px;
 }
 
 .gallery-title{
@@ -617,38 +499,35 @@ a{
 }
 
 .gallery-counter{
-  color:#ff1d25;
+  color:#ff1e25;
   font-weight:900;
 }
 
 .gallery-thumbs{
-  width:100%;
   display:flex;
   gap:8px;
   overflow-x:auto;
-  padding:6px 2px 3px;
-  scrollbar-width:thin;
+  padding:5px 2px;
 }
 
 .thumb{
   flex:0 0 72px;
   height:55px;
-  border-radius:7px;
+  padding:0;
   overflow:hidden;
+  border-radius:7px;
   border:2px solid transparent;
   background:#111;
-  padding:0;
+}
+
+.thumb.active{
+  border-color:#ff1e25;
 }
 
 .thumb img{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
-}
-
-.thumb.active{
-  border-color:#ff1d25;
 }
 
 /* TOAST */
@@ -657,19 +536,16 @@ a{
   position:fixed;
   left:50%;
   bottom:25px;
-  transform:translate(-50%,20px);
-  background:#171717;
-  color:white;
-  border:1px solid #333;
-  border-left:3px solid #ff1d25;
-  padding:13px 18px;
-  border-radius:10px;
   z-index:5000;
+  transform:translate(-50%,20px);
   opacity:0;
   pointer-events:none;
-  transition:.25s;
-  max-width:90%;
-  text-align:center;
+  background:#171717;
+  border:1px solid #333;
+  border-left:3px solid #ff1e25;
+  border-radius:10px;
+  padding:13px 18px;
+  transition:.2s;
 }
 
 .toast.show{
@@ -677,7 +553,7 @@ a{
   transform:translate(-50%,0);
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:900px){
   .grid{
@@ -686,19 +562,6 @@ a{
 }
 
 @media(max-width:620px){
-  .header{
-    height:62px;
-    padding:0 12px;
-  }
-
-  .logo{
-    font-size:20px;
-  }
-
-  .icon-btn{
-    width:39px;
-    height:39px;
-  }
 
   .hero{
     padding:55px 15px;
@@ -710,7 +573,6 @@ a{
 
   .store{
     width:94%;
-    padding-top:27px;
   }
 
   .store-top{
@@ -722,7 +584,8 @@ a{
   }
 
   .filters{
-    width:100%;
+    display:flex;
+    flex-direction:column;
   }
 
   .search,
@@ -740,7 +603,6 @@ a{
 
   .gallery-box{
     width:96vw;
-    height:90vh;
   }
 
   .gallery-main{
@@ -750,20 +612,6 @@ a{
   .gallery-arrow{
     width:43px;
     height:43px;
-    font-size:23px;
-  }
-
-  .gallery-left{
-    left:8px;
-  }
-
-  .gallery-right{
-    right:8px;
-  }
-
-  .gallery-close{
-    right:0;
-    top:-2px;
   }
 }
 </style>
@@ -779,12 +627,12 @@ a{
 
   <div class="header-right">
 
-    <button class="icon-btn" id="favoriteOpen" aria-label="Favoriler">
+    <button class="icon-btn" id="favoriteOpen">
       ♡
       <span class="badge" id="favoriteBadge">0</span>
     </button>
 
-    <button class="icon-btn" id="notificationOpen" aria-label="Bildirimler">
+    <button class="icon-btn" id="notificationOpen">
       🔔
       <span class="badge" id="notificationBadge">0</span>
     </button>
@@ -799,7 +647,7 @@ a{
   <h1>PRDX <span>STORE</span></h1>
 
   <p>
-    Car Parking Multiplayer için özel araç ilanları
+    Car Parking Multiplayer özel araç mağazası
   </p>
 
 </section>
@@ -816,14 +664,13 @@ a{
     <div class="filters">
 
       <input
-        class="search"
         id="searchInput"
+        class="search"
         type="search"
         placeholder="Araç ara..."
-        autocomplete="off"
       >
 
-      <select class="category-select" id="categoryFilter">
+      <select id="categoryFilter" class="category-select">
         <option value="all">Tüm Kategoriler</option>
         <option value="JDM">JDM</option>
       </select>
@@ -833,7 +680,469 @@ a{
   </div>
 
 
-  <div class="grid" id="listingGrid"></div>
+  <!-- =====================================================
+       İLANLAR
+       JAVASCRIPT'E BAĞLI DEĞİL
+       ===================================================== -->
+
+  <div class="grid" id="listingGrid">
+
+
+    <!-- HONDA -->
+
+    <article
+      class="card"
+      data-id="1"
+      data-title="Honda VTEC2"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/rsltqjlh.jpg"
+          alt="Honda VTEC2"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="1"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Honda VTEC2
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2026</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>1000+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          55 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="1"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- FORD -->
+
+    <article
+      class="card"
+      data-id="2"
+      data-title="Ford Transit"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/hgzfjvcm.jpg"
+          alt="Ford Transit"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="2"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Ford Transit
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2026</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>250+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          45 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="2"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- PASSAT -->
+
+    <article
+      class="card"
+      data-id="3"
+      data-title="Volkswagen Passat"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/ksrokooz.jpg"
+          alt="Volkswagen Passat"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="3"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Volkswagen Passat
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2025</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>400+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          45 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="3"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- TOFAŞ -->
+
+    <article
+      class="card"
+      data-id="4"
+      data-title="Tofaş Kartal"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/ipoamje4.jpg"
+          alt="Tofaş Kartal"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="4"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Tofaş Kartal
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2025</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>320+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          45 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="4"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- CIVIC -->
+
+    <article
+      class="card"
+      data-id="5"
+      data-title="Honda Civic 1.6 IES"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/r1pqpxwz.jpg"
+          alt="Honda Civic 1.6 IES"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="5"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Honda Civic 1.6 IES
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2026</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>300+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          40 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="5"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- MAYBACH -->
+
+    <article
+      class="card"
+      data-id="6"
+      data-title="Mercedes Maybach"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/xcfgjhak.jpg"
+          alt="Mercedes Maybach"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="6"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Mercedes Maybach
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2026</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>300+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          35 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="6"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- SUPRA -->
+
+    <article
+      class="card"
+      data-id="7"
+      data-title="Toyota Supra MK4"
+      data-category="JDM"
+    >
+
+      <div class="card-img">
+
+        <img
+          src="https://i.hizliresim.com/ipisag67.jpg"
+          alt="Toyota Supra MK4"
+        >
+
+        <button
+          class="favorite-btn"
+          data-favorite="7"
+        >
+          ♡
+        </button>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          Toyota Supra MK4
+        </div>
+
+        <div class="category">
+          JDM
+        </div>
+
+        <div class="card-info">
+
+          <div class="info">
+            <small>MODEL</small>
+            <b>2024</b>
+          </div>
+
+          <div class="info">
+            <small>GÜÇ</small>
+            <b>400+ HP</b>
+          </div>
+
+        </div>
+
+        <div class="price">
+          50 TL
+        </div>
+
+        <button
+          class="details-btn"
+          data-gallery="7"
+        >
+          📷 Fotoğrafları Gör
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
 
 </main>
 
@@ -843,14 +1152,14 @@ a{
   <h2>Satın almak mı istiyorsun?</h2>
 
   <p>
-    İlan hakkında bilgi almak için Instagram üzerinden iletişime geç.
+    Araç hakkında bilgi almak için Instagram üzerinden iletişime geç.
   </p>
 
   <a
     class="instagram-btn"
     href="https://www.instagram.com/yildizzsefayakup/"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener"
   >
     📷 Instagram'dan İletişim
   </a>
@@ -863,21 +1172,20 @@ a{
   <h2>PRDX STORE</h2>
 
   <p>
-    PRDX STORE, CPM araç ilanlarını tek yerde görüntülemek için
-    hazırlanmış özel bir mağaza arayüzüdür.
-    Favorilerini kaydedebilir, ilanların tüm fotoğraflarına bakabilir
-    ve aradığın aracı kolayca bulabilirsin.
+    CPM araç ilanlarını tek yerde bul.
+    Favorilerine ekle, fotoğrafları incele ve istediğin araç hakkında
+    Instagram üzerinden iletişime geç.
   </p>
 
 </section>
 
 
 <footer class="footer">
-  © 2026 PRDX STORE — Tüm hakları saklıdır.
+  © 2026 PRDX STORE
 </footer>
 
 
-<!-- FAVORİ / BİLDİRİM PANELİ -->
+<!-- PANEL -->
 
 <div class="overlay" id="panelOverlay">
 
@@ -915,7 +1223,6 @@ a{
       <button
         class="gallery-arrow gallery-left"
         id="galleryPrev"
-        aria-label="Önceki fotoğraf"
       >
         ‹
       </button>
@@ -924,13 +1231,12 @@ a{
         class="gallery-img"
         id="galleryImage"
         src=""
-        alt="Araç fotoğrafı"
+        alt=""
       >
 
       <button
         class="gallery-arrow gallery-right"
         id="galleryNext"
-        aria-label="Sonraki fotoğraf"
       >
         ›
       </button>
@@ -939,15 +1245,24 @@ a{
 
     <div class="gallery-info">
 
-      <div class="gallery-title" id="galleryTitle"></div>
+      <div
+        class="gallery-title"
+        id="galleryTitle"
+      ></div>
 
-      <div class="gallery-counter" id="galleryCounter">
+      <div
+        class="gallery-counter"
+        id="galleryCounter"
+      >
         1/1
       </div>
 
     </div>
 
-    <div class="gallery-thumbs" id="galleryThumbs"></div>
+    <div
+      class="gallery-thumbs"
+      id="galleryThumbs"
+    ></div>
 
   </div>
 
@@ -958,353 +1273,63 @@ a{
 
 
 <script>
-/* =========================================================
-   PRDX STORE
-   TEK JAVASCRIPT BLOĞU
-   ========================================================= */
+
+/* =====================================================
+   PRDX STORE - TEK SCRIPT
+   ===================================================== */
 
 (function(){
 
-  "use strict";
+"use strict";
 
 
-  /* =========================================================
-     GÜVENLİ STORAGE
-     ========================================================= */
+/* FOTOĞRAFLAR */
 
-  function safeGet(key, fallback){
+var photos = {
 
-    try{
+  1:[
+    "https://i.hizliresim.com/rsltqjlh.jpg",
+    "https://i.hizliresim.com/lpihth8y.jpg",
+    "https://i.hizliresim.com/drosofcc.jpg",
+    "https://i.hizliresim.com/ersfg7ij.jpg"
+  ],
 
-      var raw = window.localStorage.getItem(key);
+  2:[
+    "https://i.hizliresim.com/hgzfjvcm.jpg",
+    "https://i.hizliresim.com/ilcq4hed.jpg"
+  ],
 
-      if(!raw){
-        return fallback;
-      }
+  3:[
+    "https://i.hizliresim.com/ksrokooz.jpg",
+    "https://i.hizliresim.com/yyigtr9b.jpg"
+  ],
 
-      var value = JSON.parse(raw);
+  4:[
+    "https://i.hizliresim.com/ipoamje4.jpg",
+    "https://i.hizliresim.com/evt5zb15.jpg"
+  ],
 
-      return value;
+  5:[
+    "https://i.hizliresim.com/r1pqpxwz.jpg",
+    "https://i.hizliresim.com/ct70euvq.jpg"
+  ],
 
-    }catch(error){
+  6:[
+    "https://i.hizliresim.com/xcfgjhak.jpg",
+    "https://i.hizliresim.com/zcwgt8m4.jpg"
+  ],
 
-      return fallback;
+  7:[
+    "https://i.hizliresim.com/ipisag67.jpg",
+    "https://i.hizliresim.com/cscxemy5.jpg"
+  ]
 
-    }
+};
 
-  }
 
+/* İLAN BİLGİLERİ */
 
-  function safeSet(key, value){
+var cars = {
 
-    try{
-
-      window.localStorage.setItem(
-        key,
-        JSON.stringify(value)
-      );
-
-    }catch(error){
-
-      console.warn("Storage kullanılamıyor.");
-
-    }
-
-  }
-
-
-  /* =========================================================
-     İLANLAR
-     ========================================================= */
-
-  var listings = [
-
-    {
-      id:1,
-      title:"Honda VTEC2",
-      year:"2026",
-      power:"1000+ HP",
-      category:"JDM",
-      price:"55 TL",
-      photos:[
-        "https://i.hizliresim.com/rsltqjlh.jpg",
-        "https://i.hizliresim.com/lpihth8y.jpg",
-        "https://i.hizliresim.com/drosofcc.jpg",
-        "https://i.hizliresim.com/ersfg7ij.jpg"
-      ]
-    },
-
-    {
-      id:2,
-      title:"Ford Transit",
-      year:"2026",
-      power:"250+ HP",
-      category:"JDM",
-      price:"45 TL",
-      photos:[
-        "https://i.hizliresim.com/hgzfjvcm.jpg",
-        "https://i.hizliresim.com/ilcq4hed.jpg"
-      ]
-    },
-
-    {
-      id:3,
-      title:"Volkswagen Passat",
-      year:"2025",
-      power:"400+ HP",
-      category:"JDM",
-      price:"45 TL",
-      photos:[
-        "https://i.hizliresim.com/ksrokooz.jpg",
-        "https://i.hizliresim.com/yyigtr9b.jpg"
-      ]
-    },
-
-    {
-      id:4,
-      title:"Tofaş Kartal",
-      year:"2025",
-      power:"320+ HP",
-      category:"JDM",
-      price:"45 TL",
-      photos:[
-        "https://i.hizliresim.com/ipoamje4.jpg",
-        "https://i.hizliresim.com/evt5zb15.jpg"
-      ]
-    },
-
-    {
-      id:5,
-      title:"Honda Civic 1.6 IES",
-      year:"2026",
-      power:"300+ HP",
-      category:"JDM",
-      price:"40 TL",
-      photos:[
-        "https://i.hizliresim.com/r1pqpxwz.jpg",
-        "https://i.hizliresim.com/ct70euvq.jpg"
-      ]
-    },
-
-    {
-      id:6,
-      title:"Mercedes Maybach",
-      year:"2026",
-      power:"300+ HP",
-      category:"JDM",
-      price:"35 TL",
-      photos:[
-        "https://i.hizliresim.com/xcfgjhak.jpg",
-        "https://i.hizliresim.com/zcwgt8m4.jpg"
-      ]
-    },
-
-    {
-      id:7,
-      title:"Toyota Supra MK4",
-      year:"2024",
-      power:"400+ HP",
-      category:"JDM",
-      price:"50 TL",
-      photos:[
-        "https://i.hizliresim.com/ipisag67.jpg",
-        "https://i.hizliresim.com/cscxemy5.jpg"
-      ]
-    }
-
-  ];
-
-
-  /* =========================================================
-     STORAGE VERİLERİ
-     ========================================================= */
-
-  var favorites = safeGet(
-    "PRDX_FAVORITES",
-    []
-  );
-
-  if(!Array.isArray(favorites)){
-    favorites = [];
-  }
-
-  favorites = favorites
-    .map(function(id){
-      return Number(id);
-    })
-    .filter(function(id){
-      return Number.isFinite(id);
-    });
-
-
-  var notifications = safeGet(
-    "PRDX_NOTIFICATIONS",
-    []
-  );
-
-  if(!Array.isArray(notifications)){
-    notifications = [];
-  }
-
-
-  /* =========================================================
-     ELEMENTLER
-     ========================================================= */
-
-  var grid = document.getElementById("listingGrid");
-
-  var searchInput =
-    document.getElementById("searchInput");
-
-  var categoryFilter =
-    document.getElementById("categoryFilter");
-
-  var favoriteOpen =
-    document.getElementById("favoriteOpen");
-
-  var notificationOpen =
-    document.getElementById("notificationOpen");
-
-  var favoriteBadge =
-    document.getElementById("favoriteBadge");
-
-  var notificationBadge =
-    document.getElementById("notificationBadge");
-
-  var panelOverlay =
-    document.getElementById("panelOverlay");
-
-  var panelTitle =
-    document.getElementById("panelTitle");
-
-  var panelClose =
-    document.getElementById("panelClose");
-
-  var panelContent =
-    document.getElementById("panelContent");
-
-  var gallery =
-    document.getElementById("gallery");
-
-  var galleryImage =
-    document.getElementById("galleryImage");
-
-  var galleryTitle =
-    document.getElementById("galleryTitle");
-
-  var galleryCounter =
-    document.getElementById("galleryCounter");
-
-  var galleryThumbs =
-    document.getElementById("galleryThumbs");
-
-  var galleryClose =
-    document.getElementById("galleryClose");
-
-  var galleryPrev =
-    document.getElementById("galleryPrev");
-
-  var galleryNext =
-    document.getElementById("galleryNext");
-
-  var toast =
-    document.getElementById("toast");
-
-
-  /* =========================================================
-     TOAST
-     ========================================================= */
-
-  var toastTimer = null;
-
-  function showToast(message){
-
-    toast.textContent = message;
-
-    toast.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer = setTimeout(function(){
-
-      toast.classList.remove("show");
-
-    },2200);
-
-  }
-
-
-  /* =========================================================
-     FAVORİLER
-     ========================================================= */
-
-  function isFavorite(id){
-
-    return favorites.indexOf(Number(id)) !== -1;
-
-  }
-
-
-  function updateFavoriteBadge(){
-
-    favoriteBadge.textContent = favorites.length;
-
-    favoriteBadge.style.display =
-      favorites.length > 0
-        ? "flex"
-        : "none";
-
-  }
-
-
-  function saveFavorites(){
-
-    safeSet(
-      "PRDX_FAVORITES",
-      favorites
-    );
-
-  }
-
-
-  function toggleFavorite(id){
-
-    id = Number(id);
-
-    var index = favorites.indexOf(id);
-
-    if(index === -1){
-
-      favorites.push(id);
-
-      showToast("❤️ Favorilere eklendi");
-
-    }else{
-
-      favorites.splice(index,1);
-
-      showToast("Favorilerden kaldırıldı");
-
-    }
-
-    saveFavorites();
-
-    updateFavoriteBadge();
-
-    renderListings();
-
-    if(panelOverlay.classList.contains("show")){
-      renderFavorites();
-    }
-
-  }
-
-
-  /* =========================================================
-     İLANLARI RENDER
-     ========================================================= */
-
-  function renderListings(){
-
-    var search =
-      String
+  1:{
+    title:"H
