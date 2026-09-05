@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <meta name="google-site-verification" content="DoZOyXLI0o9KZa3WcQGtCiKD68wmU7BZlE9Ac3XQFdM" />
 
-<title>PRDX STORE</title>
+<title>PRDX STORE | CPM Araçları ve Car Parking Multiplayer Araç Mağazası</title>
+
+<meta name="description" content="PRDX STORE, Car Parking Multiplayer (CPM) araçlarını keşfedebileceğin özel araç mağazası. JDM araçlar, modifiyeli araçlar ve özel CPM araçlarını incele.">
+
+<meta name="keywords" content="PRDX STORE, PRDX Store, CPM, Car Parking Multiplayer, CPM araçları, CPM araba, CPM araba satışı, JDM, Car Parking Multiplayer Türkiye, CPM araç mağazası">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="PRDX STORE">
+<meta name="language" content="Turkish">
+<meta name="theme-color" content="#080808">
+
+<link rel="canonical" href="https://z7745533-sketch.github.io/prdx/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="PRDX STORE | CPM Araç Mağazası">
+<meta property="og:description" content="Car Parking Multiplayer araçlarını keşfet. Özel CPM ve JDM araçlarını incele.">
+<meta property="og:url" content="https://z7745533-sketch.github.io/prdx/">
+<meta property="og:site_name" content="PRDX STORE">
+<meta property="og:locale" content="tr_TR">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PRDX STORE | CPM Araç Mağazası">
+<meta name="twitter:description" content="CPM araçlarını keşfet ve PRDX STORE'da özel araçları incele.">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"PRDX STORE",
+  "alternateName":[
+    "PRDX Store",
+    "PRDX CPM Store"
+  ],
+  "url":"https://z7745533-sketch.github.io/prdx/",
+  "description":"Car Parking Multiplayer araçlarını keşfetmek için hazırlanmış PRDX STORE araç mağazası.",
+  "inLanguage":"tr-TR"
+}
+</script>
 
 <style>
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
+
 body{
 margin:0;
 background:#080808;
 color:#fff;
 font-family:Arial,Helvetica,sans-serif
 }
+
 header{
 position:sticky;
 top:0;
@@ -30,18 +72,22 @@ background:rgba(8,8,8,.95);
 border-bottom:1px solid #292929;
 backdrop-filter:blur(10px)
 }
+
 .logo{
 font-size:25px;
 font-weight:900;
 letter-spacing:2px
 }
+
 .logo span{color:#e50914}
+
 nav a{
 color:#aaa;
 text-decoration:none;
 margin-left:25px;
 font-weight:bold
 }
+
 nav a:hover{color:#e50914}
 
 .hero{
@@ -53,18 +99,22 @@ text-align:center;
 padding:60px 20px;
 background:radial-gradient(circle at center,#330000 0,#150000 28%,#080808 65%)
 }
+
 .hero h1{
 font-size:clamp(45px,9vw,90px);
 margin:0;
 font-weight:1000;
 letter-spacing:4px
 }
+
 .hero h1 span{color:#e50914}
+
 .hero p{
 color:#aaa;
 font-size:18px;
 margin:18px 0 28px
 }
+
 .hero-btn{
 display:inline-block;
 padding:14px 28px;
@@ -75,20 +125,26 @@ text-decoration:none;
 font-weight:900;
 transition:.2s
 }
+
 .hero-btn:hover{
 transform:translateY(-2px);
 background:#ff1b26
 }
 
-.section{padding:65px 7%}
+.section{
+padding:65px 7%
+}
+
 .section-title{
 text-align:center;
 margin-bottom:35px
 }
+
 .section-title h2{
 font-size:36px;
 margin:0 0 10px
 }
+
 .section-title p{
 color:#888;
 margin:0
@@ -100,6 +156,7 @@ gap:12px;
 margin-bottom:30px;
 flex-wrap:wrap
 }
+
 .controls input,
 .controls select{
 flex:1;
@@ -111,6 +168,7 @@ background:#111;
 color:#fff;
 outline:none
 }
+
 .controls input:focus,
 .controls select:focus{
 border-color:#e50914
@@ -121,6 +179,7 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:22px
 }
+
 .card{
 overflow:hidden;
 background:#111;
@@ -128,11 +187,13 @@ border:1px solid #242424;
 border-radius:14px;
 transition:.25s
 }
+
 .card:hover{
 transform:translateY(-5px);
 border-color:#e50914;
 box-shadow:0 10px 35px rgba(229,9,20,.12)
 }
+
 .card-img{
 width:100%;
 height:220px;
@@ -140,23 +201,30 @@ object-fit:cover;
 display:block;
 cursor:pointer
 }
-.card-body{padding:18px}
+
+.card-body{
+padding:18px
+}
+
 .card-title{
 font-size:23px;
 font-weight:900;
 margin-bottom:7px
 }
+
 .card-meta{
 color:#888;
 font-size:14px;
 margin-bottom:16px
 }
+
 .tags{
 display:flex;
 gap:7px;
 flex-wrap:wrap;
 margin-bottom:16px
 }
+
 .tag{
 background:#1c1c1c;
 color:#ddd;
@@ -166,15 +234,18 @@ padding:6px 9px;
 font-size:12px;
 font-weight:bold
 }
+
 .price{
 display:flex;
 align-items:center;
 justify-content:space-between
 }
+
 .price strong{
 color:#e50914;
 font-size:24px
 }
+
 .details-btn{
 border:0;
 border-radius:7px;
@@ -184,13 +255,17 @@ color:#fff;
 font-weight:900;
 cursor:pointer
 }
-.details-btn:hover{background:#ff1b26}
+
+.details-btn:hover{
+background:#ff1b26
+}
 
 .info{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:18px
 }
+
 .info-box{
 background:#101010;
 border:1px solid #252525;
@@ -198,11 +273,16 @@ border-radius:12px;
 padding:25px;
 text-align:center
 }
+
 .info-box .icon{
 font-size:32px;
 margin-bottom:12px
 }
-.info-box h3{margin:0 0 8px}
+
+.info-box h3{
+margin:0 0 8px
+}
+
 .info-box p{
 color:#888;
 line-height:1.5;
@@ -226,12 +306,17 @@ justify-content:center;
 padding:20px;
 background:rgba(0,0,0,.92)
 }
-.modal.active{display:flex}
+
+.modal.active{
+display:flex
+}
+
 .modal-content{
 width:min(1000px,100%);
 max-height:95vh;
 position:relative
 }
+
 .gallery-main{
 width:100%;
 height:min(65vh,600px);
@@ -239,6 +324,7 @@ object-fit:contain;
 border-radius:10px;
 background:#050505
 }
+
 .close{
 position:absolute;
 right:0;
@@ -249,6 +335,7 @@ color:#fff;
 font-size:35px;
 cursor:pointer
 }
+
 .arrow{
 position:absolute;
 top:50%;
@@ -263,6 +350,7 @@ font-size:25px;
 cursor:pointer;
 z-index:5
 }
+
 .prev{left:15px}
 .next{right:15px}
 
@@ -273,6 +361,7 @@ gap:10px;
 margin-top:12px;
 overflow-x:auto
 }
+
 .thumbs img{
 width:80px;
 height:55px;
@@ -282,49 +371,91 @@ opacity:.55;
 cursor:pointer;
 border:2px solid transparent
 }
+
 .thumbs img.active{
 opacity:1;
 border-color:#e50914
 }
 
 @media(max-width:650px){
-header{padding:0 5%}
+
+header{
+padding:0 5%
+}
+
 nav a{
 margin-left:12px;
 font-size:13px
 }
-.section{padding:50px 5%}
-.hero{min-height:380px}
-.card-img{height:200px}
-.close{top:-40px}
+
+.section{
+padding:50px 5%
 }
+
+.hero{
+min-height:380px
+}
+
+.card-img{
+height:200px
+}
+
+.close{
+top:-40px
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">PRDX<span>STORE</span></div>
+
+<div class="logo">
+PRDX<span>STORE</span>
+</div>
 
 <nav>
 <a href="#store">Mağaza</a>
 <a href="#info">Hakkımızda</a>
 </nav>
+
 </header>
 
 <section class="hero">
+
 <div>
-<h1>PRDX<span>STORE</span></h1>
-<p>CPM araçlarının yeni adresi.</p>
-<a class="hero-btn" href="#store">ARAÇLARI KEŞFET</a>
+
+<h1>
+PRDX<span>STORE</span>
+</h1>
+
+<p>
+CPM araçlarının yeni adresi.
+</p>
+
+<a class="hero-btn" href="#store">
+ARAÇLARI KEŞFET
+</a>
+
 </div>
+
 </section>
 
 <section class="section" id="store">
 
 <div class="section-title">
-<h2>ARAÇ MAĞAZASI</h2>
-<p>Beğendiğin aracı seç ve detaylarını incele.</p>
+
+<h2>
+ARAÇ MAĞAZASI
+</h2>
+
+<p>
+Beğendiğin aracı seç ve detaylarını incele.
+</p>
+
 </div>
 
 <div class="controls">
@@ -336,64 +467,136 @@ placeholder="Araç, marka veya model ara..."
 oninput="renderListings()"
 >
 
-<select id="category" onchange="renderListings()">
-<option value="all">Tüm Kategoriler</option>
-<option value="JDM">JDM</option>
+<select
+id="category"
+onchange="renderListings()"
+>
+
+<option value="all">
+Tüm Kategoriler
+</option>
+
+<option value="JDM">
+JDM
+</option>
+
 </select>
 
 </div>
 
-<div class="grid" id="listingGrid"></div>
+<div
+class="grid"
+id="listingGrid"
+></div>
 
 </section>
 
-<section class="section" id="info">
+<section
+class="section"
+id="info"
+>
 
 <div class="section-title">
-<h2>NEDEN PRDX STORE?</h2>
-<p>CPM araçlarını kolayca keşfet.</p>
+
+<h2>
+NEDEN PRDX STORE?
+</h2>
+
+<p>
+CPM araçlarını kolayca keşfet.
+</p>
+
 </div>
 
 <div class="info">
 
 <div class="info-box">
+
 <div class="icon">🚗</div>
-<h3>Özel Araçlar</h3>
-<p>Birbirinden farklı CPM araçlarını tek yerde bul.</p>
+
+<h3>
+Özel Araçlar
+</h3>
+
+<p>
+Birbirinden farklı CPM araçlarını tek yerde bul.
+</p>
+
 </div>
 
 <div class="info-box">
+
 <div class="icon">⚡</div>
-<h3>Güçlü Modeller</h3>
-<p>Performans bilgileri ve araç detaylarını incele.</p>
+
+<h3>
+Güçlü Modeller
+</h3>
+
+<p>
+Performans bilgileri ve araç detaylarını incele.
+</p>
+
 </div>
 
 <div class="info-box">
+
 <div class="icon">📸</div>
-<h3>Detaylı Galeri</h3>
-<p>Her aracın fotoğraflarını galeri üzerinden görüntüle.</p>
+
+<h3>
+Detaylı Galeri
+</h3>
+
+<p>
+Her aracın fotoğraflarını galeri üzerinden görüntüle.
+</p>
+
 </div>
 
 <div class="info-box">
+
 <div class="icon">🔥</div>
-<h3>PRDX STORE</h3>
-<p>CPM topluluğu için hazırlanmış özel araç mağazası.</p>
+
+<h3>
+PRDX STORE
+</h3>
+
+<p>
+CPM topluluğu için hazırlanmış özel araç mağazası.
+</p>
+
 </div>
 
 </div>
+
 </section>
 
 <footer>
+
 © 2026 PRDX STORE — Tüm hakları saklıdır.
+
 </footer>
 
-<div class="modal" id="galleryModal" onclick="outsideClose(event)">
+<div
+class="modal"
+id="galleryModal"
+onclick="outsideClose(event)"
+>
 
 <div class="modal-content">
 
-<button class="close" onclick="closeGallery()">×</button>
+<button
+class="close"
+onclick="closeGallery()"
+>
+×
+</button>
 
-<button class="arrow prev" onclick="changePhoto(-1)">‹</button>
+<button
+class="arrow prev"
+onclick="changePhoto(-1)"
+>
+‹
+</button>
 
 <img
 id="galleryMain"
@@ -402,11 +605,20 @@ src=""
 alt="Araç fotoğrafı"
 >
 
-<button class="arrow next" onclick="changePhoto(1)">›</button>
+<button
+class="arrow next"
+onclick="changePhoto(1)"
+>
+›
+</button>
 
-<div class="thumbs" id="thumbs"></div>
+<div
+class="thumbs"
+id="thumbs"
+></div>
 
 </div>
+
 </div>
 
 <script>
@@ -469,6 +681,20 @@ photos:[
 "https://i.hizliresim.com/ipoamje4.jpg",
 "https://i.hizliresim.com/evt5zb15.jpg"
 ]
+},
+
+{
+id:5,
+brand:"Honda",
+model:"Civic 1.6 IES",
+year:"2026 Model",
+power:"300+ HP",
+category:"JDM",
+price:"40 TL",
+photos:[
+"https://i.hizliresim.com/r1pqpxwz.jpg",
+"https://i.hizliresim.com/ct70euvq.jpg"
+]
 }
 
 ];
@@ -515,18 +741,28 @@ grid.innerHTML="";
 if(filtered.length===0){
 
 grid.innerHTML=`
+
 <div style="
 grid-column:1/-1;
 text-align:center;
 padding:50px;
 color:#777;
 ">
-<h3>Araç bulunamadı.</h3>
-<p>Arama kriterlerini değiştirmeyi dene.</p>
+
+<h3>
+Araç bulunamadı.
+</h3>
+
+<p>
+Arama kriterlerini değiştirmeyi dene.
+</p>
+
 </div>
+
 `;
 
 return;
+
 }
 
 filtered.forEach(item=>{
@@ -586,6 +822,7 @@ FOTOĞRAFLAR
 </div>
 
 </div>
+
 `;
 
 grid.appendChild(card);
@@ -610,6 +847,7 @@ document
 .classList.add("active");
 
 document.body.style.overflow="hidden";
+
 }
 
 function updateGallery(){
@@ -661,6 +899,7 @@ currentPhoto=0;
 }
 
 updateGallery();
+
 }
 
 function closeGallery(){
@@ -672,6 +911,7 @@ document
 document.body.style.overflow="";
 
 currentListing=null;
+
 }
 
 function outsideClose(event){
